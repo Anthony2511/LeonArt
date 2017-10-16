@@ -327,19 +327,19 @@ img
 }
 .header-home__link
 {
-    font-size: 1em;
+    font-size: 1.125em;
     font-weight: 700;
 
     position: relative;
     top: 100px;
     left: -385px;
 
-    padding: 1.25em 3.125em;
+    padding: 1.111111111111111em 2.777777777777778em;
 
     text-transform: uppercase;
 
-    border: .125em solid #fff;
-    border-radius: .625em;
+    border: .111111111111111em solid #fff;
+    border-radius: .555555555555556em;
     background-color: rgba(255,255,255,.1);
 }
 .nav
@@ -359,6 +359,15 @@ img
     text-align: right;
 
     color: #fff;
+}
+.nav__logo
+{
+    position: absolute;
+    top: -1.25em;
+    left: 0;
+
+    max-width: 3.75em;
+    height: auto;
 }
 .nav__item
 {
