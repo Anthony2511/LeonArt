@@ -12,12 +12,27 @@
   </div>
   <div class="nav__bloc">
     <ul class="nav__menu">
-      <?php global $post; $thePostID = $post->ID; ?>
-      <?php foreach (b_get_menu_items('main-nav') as $navItem): ?>
         <li class="nav__item">
-          <a class="nav__link" href="<?= $navItem->url;?>" title="Vers la page d'accueil"><span class="nav__span <?php echo $thePostID == $navItem->id ? "nav__span--active" : "" ;?>"><?php echo $navItem->label;?></span></a>
+            <a class="nav__link" href="index.php" title="Vers la page d'accueil"><span class="nav__span nav__span--active">Accueil</span></a>
         </li>
-      <?php endforeach; ?>
+        <li class="nav__item">
+            <a class="nav__link" href="index.php" title="Vers la page d'accueil"><span class="nav__span nav__span--active">Programmes</span></a>
+        </li>
+        <li class="nav__item">
+            <a class="nav__link" href="index.php" title="Vers la page d'accueil"><span class="nav__span nav__span--active">Agenda</span></a>
+        </li>
+        <li class="nav__item">
+            <a class="nav__link" href="index.php" title="Vers la page d'accueil"><span class="nav__span nav__span--active">Pratique</span></a>
+        </li>
+        <li class="nav__item">
+            <a class="nav__link" href="index.php" title="Vers la page d'accueil"><span class="nav__span nav__span--active">&Aacute; Propos</span></a>
+        </li>
+        <li class="nav__item">
+            <a class="nav__link" href="index.php" title="Vers la page d'accueil"><span class="nav__span nav__span--active">Actualités</span></a>
+        </li>
+        <li class="nav__item">
+            <a class="nav__link" href="index.html" title="Vers la page d'accueil"><span class="nav__span nav__span--active">Contact</span></a>
+        </li>
     </ul>
   </div>
 </nav>

@@ -147,13 +147,9 @@ html
 }
 html *
 {
-    font-family: CatamaranStack;
+    font-family: 'opensans';
 
     box-sizing: border-box;
-
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
     /*background-image url("../images/grid.png")
   background-repeat repeat-y
   background-position center center
@@ -265,4 +261,72 @@ img
     font-style: normal;
 
     src: url('../fonts/opensans/opensans-extrabold-webfont.woff2') format('woff2'), url('../fonts/opensans/opensans-extrabold-webfont.woff') format('woff');
+}
+.header
+{
+    position: relative;
+
+    min-height: 45.8em;
+
+    background: url('../images/backgroundHeader.jpg') no-repeat top center/cover;
+    background-position: 50% 80%;
+}
+.header:before
+{
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    content: '';
+
+    background-color: rgba(133,28,71,.7);
+}
+.header-home
+{
+    position: relative;
+    z-index: 15;
+
+    padding-top: 15.625em;
+
+    color: #fff;
+}
+.header-home__title
+{
+    font-family: 'whoopass';
+    font-size: 3.75em;
+
+    margin-bottom: .833333333333333em;
+
+    letter-spacing: .2em;
+}
+.header-home__text
+{
+    font-family: 'firasans';
+    font-size: 1.5em;
+    font-weight: 300;
+    line-height: 1.5em;
+
+    display: block;
+
+    max-width: 80%;
+    margin-bottom: 2.083333333333333em;
+}
+.header-home__date
+{
+    font-family: 'firasans';
+    font-size: 1.875em;
+    font-weight: 700;
+
+    color: #ffc652;
+}
+.wrap
+{
+    max-width: 77.5em;
+    margin: 0 auto;
 }

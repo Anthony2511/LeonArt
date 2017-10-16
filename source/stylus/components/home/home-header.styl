@@ -1,0 +1,40 @@
+.header
+    background url('../images/backgroundHeader.jpg') no-repeat top center/cover
+    background-position: 50% 80%
+    position: relative
+    min-height: 45.8em
+    &:before
+      content: ''
+      position: absolute
+      top: 0
+      left: 0
+      right: 0
+      bottom: 0
+      width: 100%
+      height: 100%
+      background-color: rgba(133,28,71,0.7)
+      z-index: 10
+
+.header-home
+  position: relative
+  z-index: 15
+  padding-top: s(250,16)
+  color: $white
+  &__title
+    font-size: s(60,16)
+    letter-spacing: 0.2em
+    font-family: 'whoopass'
+    margin-bottom: s(50,60)
+  &__text
+    display: block
+    font-family: 'firasans'
+    font-size: s(24,16)
+    max-width: 80%
+    line-height: 1.5em
+    font-weight: 300
+    margin-bottom: s(50,24)
+  &__date
+    color: $darkYellow
+    font-size: s(30,16)
+    font-weight: 700
+    font-family: 'firasans'
