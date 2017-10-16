@@ -325,6 +325,49 @@ img
 
     color: #ffc652;
 }
+.header-home__link
+{
+    font-size: 1em;
+    font-weight: 700;
+
+    position: relative;
+    top: 100px;
+    left: -385px;
+
+    padding: 1.25em 3.125em;
+
+    text-transform: uppercase;
+
+    border: .125em solid #fff;
+    border-radius: .625em;
+    background-color: rgba(255,255,255,.1);
+}
+.nav
+{
+    font-size: 1em;
+    font-weight: 500;
+
+    position: absolute;
+    z-index: 20;
+    top: 3.125em;
+    right: 0;
+    left: 0;
+
+    max-width: 77.5em;
+    margin: 0 auto;
+
+    text-align: right;
+
+    color: #fff;
+}
+.nav__item
+{
+    display: inline-block;
+}
+.nav__item + .nav__item
+{
+    margin-left: 2.5em;
+}
 .wrap
 {
     max-width: 77.5em;
