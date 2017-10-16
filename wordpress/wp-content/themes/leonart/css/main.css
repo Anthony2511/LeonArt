@@ -188,58 +188,41 @@ img
 }
 @font-face
 {
-    font-family: 'icomoon';
-    font-weight: normal;
-    font-style: normal;
-
-    src: url('../fonts/icomoon/icomoon.eot?la0r6h');
-    src: url('../fonts/icomoon/icomoon.eot?la0r6h#iefix') format('embedded-opentype'), url('../fonts/icomoon/icomoon.ttf?la0r6h') format('truetype'), url('../fonts/icomoon/icomoon.woff?la0r6h') format('woff'), url('../fonts/icomoon/icomoon.svg?la0r6h#icomoon') format('svg');
-}
-@font-face
-{
-    font-family: 'crumble';
-    font-weight: normal;
-    font-style: normal;
-
-    src: url('../fonts/crumble/dk_crayon_crumble-webfont.woff2') format('woff2'), url('../fonts/crumble/dk_crayon_crumble-webfont.woff') format('woff');
-}
-@font-face
-{
-    font-family: 'lato';
+    font-family: 'opensans';
     font-weight: 300;
     font-style: normal;
 
-    src: url('../fonts/lato/lato-light-webfont.woff2') format('woff2'), url('../fonts/lato/lato-light-webfont.woff') format('woff');
+    src: url('../fonts/opensans/opensans-light-webfont.woff2') format('woff2'), url('../fonts/opensans/opensans-light-webfont.woff') format('woff');
 }
 @font-face
 {
-    font-family: 'lato';
+    font-family: 'opensans';
     font-weight: 400;
     font-style: normal;
 
-    src: url('../fonts/lato/lato-regular-webfont.woff2') format('woff2'), url('../fonts/lato/lato-regular-webfont.woff') format('woff');
+    src: url('../fonts/opensans/opensans-regular-webfont.woff2') format('woff2'), url('../fonts/opensans/opensans-regular-webfont.woff') format('woff');
 }
 @font-face
 {
-    font-family: 'lato';
+    font-family: 'opensans';
     font-weight: 500;
     font-style: normal;
 
-    src: url('../fonts/lato/lato-semibold-webfont.woff2') format('woff2'), url('../fonts/lato/lato-semibold-webfont.woff') format('woff');
+    src: url('../fonts/opensans/opensans-semibold-webfont.woff2') format('woff2'), url('../fonts/opensans/opensans-semibold-webfont.woff') format('woff');
 }
 @font-face
 {
-    font-family: 'lato';
-    font-weight: 600;
-    font-style: normal;
-
-    src: url('../fonts/lato/lato-heavy-webfont.woff2') format('woff2'), url('../fonts/lato/lato-heavy-webfont.woff') format('woff');
-}
-@font-face
-{
-    font-family: 'lato';
+    font-family: 'opensans';
     font-weight: 700;
     font-style: normal;
 
-    src: url('../fonts/lato/lato-bold-webfont.woff2') format('woff2'), url('../fonts/lato/lato-bold-webfont.woff') format('woff');
+    src: url('../fonts/opensans/opensans-bold-webfont.woff2') format('woff2'), url('../fonts/opensans/opensans-bold-webfont.woff') format('woff');
+}
+@font-face
+{
+    font-family: 'opensans';
+    font-weight: 800;
+    font-style: normal;
+
+    src: url('../fonts/opensans/opensans-extrabold-webfont.woff2') format('woff2'), url('../fonts/opensans/opensans-extrabold-webfont.woff') format('woff');
 }

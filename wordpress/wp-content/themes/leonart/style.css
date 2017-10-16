@@ -1,14 +1,15 @@
 /*
 
-Theme Name: Un thème d'apprentissage de Wordpress
-Theme URI: http://www.example.com
-Author: Quentin George
-Author URI: http://www.example.com
-Description: Via ce thème, nous allons apprendre toutes les notions de base requises pour construire un thème Wordpress
-Version: 1.0.0
+Theme Name: Léon'Art
+Theme URI: http://www.beaumecker.be/mariam-faso
+Author: Anthony Beaumecker
+Author URI: http://www.beaumecker.be/mariam-faso
+Description: Thème pour l'ASBL Léon'Art
+Version: 1.0
+Text Domain: dw
 
 */
 
-.sticky {}           /* DO NOT EDIT THIS */
-.gallery-caption {}  /* THESE ARE USELESS */
-.bypostauthor {}     /* THESE ARE ONLY TO KEEP THEME CHECK HAPPY */
+.sticky {}          /* DO NOT EDIT THIS */
+.gallery-caption {} /* THESE ARE USELESS */
+.bypostauthor {}    /* THEY ARE ONLY TO KEEP THEME CHECK HAPPY */

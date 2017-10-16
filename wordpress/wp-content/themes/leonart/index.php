@@ -6,7 +6,9 @@ Template Name: Page d’accueil
 
 <?php include('head.php'); ?>
 
-  <body>
-    <h1>Bonjour</h1>
+<body>
+  <h1 aria-level="1" role="heading">Salut</h1>
 
-<?php include('footer.php'); ?>
+
+
+	<?php include('footer.php');  ?>

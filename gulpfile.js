@@ -30,6 +30,7 @@ var
     source = 'source/',
     dest = 'wordpress/wp-content/themes/leonart/';
 
+
 // Définition de quelques variables liées à nos tâches (options de tâches)
 var
     imagesOpts = {
