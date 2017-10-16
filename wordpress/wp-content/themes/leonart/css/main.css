@@ -188,6 +188,46 @@ img
 }
 @font-face
 {
+    font-family: 'whoopass';
+    font-weight: 800;
+    font-style: normal;
+
+    src: url('../fonts/whoopass/whoopass-webfont.woff2') format('woff2'), url('../fonts/whoopass/whoopass-webfont.woff') format('woff');
+}
+@font-face
+{
+    font-family: 'firasans';
+    font-weight: 400;
+    font-style: normal;
+
+    src: url('../fonts/firasans/firasans-regular-webfont.woff2') format('woff2'), url('../fonts/firasans/firasans-regular-webfont.woff') format('woff');
+}
+@font-face
+{
+    font-family: 'firasans';
+    font-weight: 500;
+    font-style: normal;
+
+    src: url('../fonts/firasans/firasans-semibold-webfont.woff2') format('woff2'), url('../fonts/firasans/firasans-semibold-webfont.woff') format('woff');
+}
+@font-face
+{
+    font-family: 'firasans';
+    font-weight: 700;
+    font-style: normal;
+
+    src: url('../fonts/firasans/firasans-bold-webfont.woff2') format('woff2'), url('../fonts/firasans/firasans-bold-webfont.woff') format('woff');
+}
+@font-face
+{
+    font-family: 'firasans';
+    font-weight: 800;
+    font-style: normal;
+
+    src: url('../fonts/firasans/firasans-extrabold-webfont.woff2') format('woff2'), url('../fonts/firasans/firasans-extrabold-webfont.woff') format('woff');
+}
+@font-face
+{
     font-family: 'opensans';
     font-weight: 300;
     font-style: normal;
