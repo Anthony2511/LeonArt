@@ -20,6 +20,8 @@
   z-index: 15
   padding-top: s(250,16)
   color: $white
+  display: flex
+  flex-direction: column
   &__title
     font-size: s(60,16)
     letter-spacing: 0.2em
@@ -38,10 +40,8 @@
     font-size: s(30,16)
     font-weight: 700
     font-family: 'firasans'
+    margin-bottom: s(50,30)
   &__link
-    position: relative
-    left: s(-385,18)
-    top: s(100,18)
     font-size: s(18,16)
     text-transform: uppercase
     font-weight: 700
@@ -49,7 +49,42 @@
     border: s(2,18) solid $white
     border-radius: s(10,18)
     padding: s(15,18) s(40,18)
+    max-width: s(234,18)
 
 @media screen and ( max-width: 1300px)
   .header-home
     padding: s(250,16) s(20,16) 0 s(20,16)
+
+@media screen and ( max-width: 1024px)
+  .header-home
+    &__title
+      font-size: s(50,16)
+    &__text
+      font-size: s(20,16)
+      line-height: 1.4em
+    &__date
+      font-size: s(25,16)
+
+@media screen and ( max-width: 750px)
+  .header-home
+    &__title
+      font-size: s(40,16)
+      letter-spacing: 0.1em
+      margin-bottom: s(30,40)
+    &__text
+      font-size: s(20,16)
+      max-width: 100%
+      margin-bottom: s(30,20)
+    &__link
+      font-size: s(16,16)
+      padding: s(15,16) s(40,16)
+      max-width: s(212,16)
+
+@media screen and ( max-width: 550px)
+  .header-home
+    &__title
+      font-size: s(30,16)
+    &__text
+      font-size: s(18,16)
+    &__date
+      font-size: s(20,16)
