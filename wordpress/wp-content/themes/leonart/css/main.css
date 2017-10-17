@@ -331,10 +331,10 @@ img
     font-weight: 700;
 
     position: relative;
-    top: 100px;
-    left: -385px;
+    top: 5.555555555555555em;
+    left: -21.38888888888889em;
 
-    padding: 1.111111111111111em 2.777777777777778em;
+    padding: .833333333333333em 2.222222222222222em;
 
     text-transform: uppercase;
 
@@ -372,10 +372,46 @@ img
 .nav__item
 {
     display: inline-block;
+
+    padding-bottom: .3125em;
+}
+.nav__item:hover span
+{
+    background-size: 100% .1875em;
 }
 .nav__item + .nav__item
 {
     margin-left: 2.5em;
+}
+.nav__link
+{
+    display: block;
+
+    width: 100%;
+    height: 100%;
+}
+.nav__span
+{
+    display: inline-block;
+
+    padding-bottom: .375em;
+
+    transition: .5s;
+
+    border: none;
+    border-bottom: .125em solid transparent;
+    background: linear-gradient(to top, #ffc652, #ffc652) no-repeat bottom left;
+    background-position: bottom center;
+    background-size: 0 .125em;
+}
+.nav__span--active
+{
+    padding-bottom: .3125em;
+
+    transition: none;
+
+    border-color: #ffc652;
+    background: none;
 }
 .wrap
 {

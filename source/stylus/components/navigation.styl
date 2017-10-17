@@ -18,5 +18,26 @@
     top: s(-20,16)
   &__item
     display: inline-block
+    padding-bottom: s(5,16)
+    &:hover span
+      background-size: 100% s(3,16)
   &__item + &__item
     margin-left: s(40,16)
+  &__link
+    display: block
+    width: 100%
+    height: 100%
+  &__span
+    display: inline-block
+    border-bottom: s(2,16) solid transparent
+    transition: 0.5s
+    border: none
+    background:linear-gradient(to top, $darkYellow,$darkYellow) no-repeat bottom left
+    padding-bottom: s(6,16)
+    background-size: 0 s(2,16)
+    background-position: bottom center
+    &--active
+      border-color: $darkYellow
+      background: none
+      transition: none
+      padding-bottom: s(5,16)

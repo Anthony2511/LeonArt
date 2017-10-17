@@ -28,22 +28,22 @@
             <a class="nav__link" href="index.php" title="Vers la page d'accueil"><span class="nav__span nav__span--active">Accueil</span></a>
         </li>
         <li class="nav__item">
-            <a class="nav__link" href="index.php" title="Vers la page d'accueil"><span class="nav__span nav__span--active">Programmes</span></a>
+            <a class="nav__link" href="index.php" title="Vers la page d'accueil"><span class="nav__span">Programmes</span></a>
         </li>
         <li class="nav__item">
-            <a class="nav__link" href="index.php" title="Vers la page d'accueil"><span class="nav__span nav__span--active">Agenda</span></a>
+            <a class="nav__link" href="index.php" title="Vers la page d'accueil"><span class="nav__span">Agenda</span></a>
         </li>
         <li class="nav__item">
-            <a class="nav__link" href="index.php" title="Vers la page d'accueil"><span class="nav__span nav__span--active">Pratique</span></a>
+            <a class="nav__link" href="index.php" title="Vers la page d'accueil"><span class="nav__span">Pratique</span></a>
         </li>
         <li class="nav__item">
-            <a class="nav__link" href="index.php" title="Vers la page d'accueil"><span class="nav__span nav__span--active">&Aacute; Propos</span></a>
+            <a class="nav__link" href="index.php" title="Vers la page d'accueil"><span class="nav__span">&Aacute; Propos</span></a>
         </li>
         <li class="nav__item">
-            <a class="nav__link" href="index.php" title="Vers la page d'accueil"><span class="nav__span nav__span--active">Actualités</span></a>
+            <a class="nav__link" href="index.php" title="Vers la page d'accueil"><span class="nav__span">Actualités</span></a>
         </li>
         <li class="nav__item">
-            <a class="nav__link" href="index.html" title="Vers la page d'accueil"><span class="nav__span nav__span--active">Contact</span></a>
+            <a class="nav__link" href="index.html" title="Vers la page d'accueil"><span class="nav__span">Contact</span></a>
         </li>
     </ul>
   </div>
