@@ -1,0 +1,48 @@
+.home
+  &__artistes
+    padding: s(100,16) 0
+  &__artistes-title
+    font-size: s(50,16)
+    font-family: 'firasans'
+    font-weight: 800
+    color: $darkGrey
+    text-align: center
+    margin-bottom: s(50,50)
+  &__artistes-bloc
+    display: flex
+    flex-direction: row
+    margin-bottom: s(50,16)
+  &__artistes-button
+    background-color: $darkYellow
+    color: $mediumRed
+    font-size: s(20,16)
+    font-weight: 600
+    padding: s(20,20) s(40,20)
+    text-transform: uppercase
+    border-radius: s(10,20)
+    display: flex
+    flex-direction: row
+    justify-content: center
+    max-width: 35%
+    margin: 0 auto
+  &__artistes-link + &__artistes-link
+    margin-left: s(50,16)
+  &__single-name
+    font-family: 'opensans'
+    font-size: s(30,16)
+    background-color: $white
+    padding: s(30,30) 0 s(20,30)
+    font-weight: 500
+    text-align: center
+    color: $darkGrey
+    &:after
+      content: ''
+      display: block
+      width: s(100,30)
+      height: s(3,30)
+      margin: s(20,30) auto
+      background-color: $darkGrey
+  &__artistes-link
+    display: block
+    width: 100%
+    height: 100%

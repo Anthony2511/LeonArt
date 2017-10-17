@@ -6,18 +6,39 @@ Template Name: Page d’accueil
 
 <?php include('head.php'); ?>
 
-<body class="margin">
+<body>
   <h1 class="hidden" aria-level="1" role="heading"><?php the_title(); ?></h1>
   <?php include('header-home.php'); ?>
   <?php include('navigation.php'); ?>
-  <section class="home__artistes">
-    <h2 class="home__artistes-title title-red" aria-level="2" role="heading"><?= __('Nos artistes','wp'); ?></h2>
-    <section class="home__single-artiste">
-      <figure class="home__bloc-img">
-        <img class="home__single-img" src="<?= $images . 'artist.jpg'; ?>" width="450" height="600" alt="Photo de profil de Leonardo">
-      </figure>
-      <h3 class="home__single-name" aria-level="3" role="heading">Leonardo DiCaprio</h3>
-    </section>
+  <section class="home__artistes wrap">
+    <h2 class="home__artistes-title title-red" aria-level="2" role="heading"><?= __('Quelques artistes','wp'); ?></h2>
+    <div class="home__artistes-bloc">
+      <a href="#" class="home__artistes-link">
+        <section class="home__single-artiste">
+          <figure class="home__bloc-img">
+            <img class="home__single-img" src="<?= $images . 'artist.jpg'; ?>" width="450" height="600" alt="Photo de profil de Leonardo">
+          </figure>
+          <h3 class="home__single-name" aria-level="3" role="heading">Leonardo DiCaprio</h3>
+        </section>
+      </a>
+      <a href="#" class="home__artistes-link">
+        <section class="home__single-artiste">
+          <figure class="home__bloc-img">
+            <img class="home__single-img" src="<?= $images . 'artist.jpg'; ?>" width="450" height="600" alt="Photo de profil de Leonardo">
+          </figure>
+          <h3 class="home__single-name" aria-level="3" role="heading">Leonardo DiCaprio</h3>
+        </section>
+      </a>
+      <a href="#" class="home__artistes-link">
+        <section class="home__single-artiste">
+          <figure class="home__bloc-img">
+            <img class="home__single-img" src="<?= $images . 'artist.jpg'; ?>" width="450" height="600" alt="Photo de profil de Leonardo">
+          </figure>
+          <h3 class="home__single-name" aria-level="3" role="heading">Leonardo DiCaprio</h3>
+        </section>
+      </a>
+    </div>
+    <a href="#" class="home__artistes-button">Voir tous les artistes</a>
   </section>
 
 
