@@ -23,7 +23,29 @@ function theme_asset($src = '') {
 show_admin_bar(false);
 
 function wp_register_types() {
-
+  register_post_type( 'artistes', [
+              'label' => 'Artistes',
+              'labels' => [
+                          'singular_name' => 'artiste',
+                          'add_new' =>'Ajouter un nouvel artiste'
+                    ],
+              'description' => 'Permet d\'afficher les différents artistes',
+              'public' => true,
+              'menu_position' => 20,
+              'menu_icon' => 'dashicons-universal-access',
+              'supports' => ['title','thumbnail']
+        ] );
+  register_taxonomy('places', 'artistes', [
+      'label' => 'Secteur d\'activité',
+      'labels' => [
+          'singular_name' => 'Secteur d\'activité',
+          'update_item' => 'Éditer le secteur d\'activité',
+          'add_new_item' => 'Ajouter un nouveau secteur d\'activité'
+      ],
+      'description' => 'Permet de préciser le secteur d\'activité d\'un artiste',
+      'public' => true,
+      'hierarchical' => true
+  ]);
 }
 
 // Register menu
