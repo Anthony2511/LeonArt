@@ -35,14 +35,50 @@ function wp_register_types() {
               'menu_icon' => 'dashicons-universal-access',
               'supports' => ['title','thumbnail']
         ] );
-  register_taxonomy('places', 'artistes', [
+  register_post_type( 'activites', [
+              'label' => 'Activités',
+              'labels' => [
+                          'singular_name' => 'activites',
+                          'add_new' =>'Ajouter un nouvel artiste'
+                    ],
+              'description' => 'Permet d\'afficher les différents types d\'activités',
+              'public' => true,
+              'menu_position' => 21,
+              'menu_icon' => 'dashicons-calendar-alt',
+              'supports' => ['title','thumbnail']
+        ] );
+  register_post_type( 'news', [
+              'label' => 'News',
+              'labels' => [
+                          'singular_name' => 'news',
+                          'add_new' =>'Ajouter une nouvelle news'
+                    ],
+              'description' => 'Permet d\'afficher les différentes news',
+              'public' => true,
+              'menu_position' => 23,
+              'menu_icon' => 'dashicons-welcome-write-blog',
+              'supports' => ['title','thumbnail']
+        ] );
+  register_post_type( 'lieux', [
+              'label' => 'Lieux',
+              'labels' => [
+                          'singular_name' => 'lieux',
+                          'add_new' =>'Ajouter un nouveau lieu'
+                    ],
+              'description' => 'Permet d\'afficher les différents lieux',
+              'public' => true,
+              'menu_position' => 22,
+              'menu_icon' => 'dashicons-location',
+              'supports' => ['title','thumbnail']
+        ] );
+  register_taxonomy('places', array('artistes', 'activites'), [
       'label' => 'Secteur d\'activité',
       'labels' => [
           'singular_name' => 'Secteur d\'activité',
           'update_item' => 'Éditer le secteur d\'activité',
           'add_new_item' => 'Ajouter un nouveau secteur d\'activité'
       ],
-      'description' => 'Permet de préciser le secteur d\'activité d\'un artiste',
+      'description' => 'Permet de préciser le secteur d\'activité pour un artiste ou un évènement',
       'public' => true,
       'hierarchical' => true
   ]);

@@ -24,27 +24,12 @@
       </svg>
     </a>
     <ul class="nav__menu">
+      <?php global $post; $thePostID = $post->ID; ?>
+      <?php foreach (b_get_menu_items('main-nav') as $navItem): ?>
         <li class="nav__item">
-            <a class="nav__link" href="index.php" title="Vers la page d'accueil"><span class="nav__span nav__span--active">Accueil</span></a>
+            <a class="nav__link" href="<?= $navItem->url;?>" title="Vers la page d'accueil"><span class="nav__span <?php echo $thePostID == $navItem->id ? "nav__span--active" : "" ;?>"><?php echo $navItem->label;?></span></a>
         </li>
-        <li class="nav__item">
-            <a class="nav__link" href="index.php" title="Vers la page d'accueil"><span class="nav__span">Programmes</span></a>
-        </li>
-        <li class="nav__item">
-            <a class="nav__link" href="index.php" title="Vers la page d'accueil"><span class="nav__span">Agenda</span></a>
-        </li>
-        <li class="nav__item">
-            <a class="nav__link" href="index.php" title="Vers la page d'accueil"><span class="nav__span">Pratique</span></a>
-        </li>
-        <li class="nav__item">
-            <a class="nav__link" href="index.php" title="Vers la page d'accueil"><span class="nav__span">&Aacute; Propos</span></a>
-        </li>
-        <li class="nav__item">
-            <a class="nav__link" href="index.php" title="Vers la page d'accueil"><span class="nav__span">Actualités</span></a>
-        </li>
-        <li class="nav__item">
-            <a class="nav__link" href="index.html" title="Vers la page d'accueil"><span class="nav__span">Contact</span></a>
-        </li>
+        <?php endforeach; ?>
     </ul>
   </div>
 </nav>
