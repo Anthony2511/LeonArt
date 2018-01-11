@@ -499,10 +499,10 @@ body
 .home__single-name
 {
     font-family: 'opensans';
-    font-size: 1.5625em;
+    font-size: 1.375em;
     font-weight: 600;
 
-    padding: 1.2em .8em .8em;
+    padding: .909090909090909em .454545454545455em;
 
     text-align: center;
 
@@ -513,9 +513,9 @@ body
 {
     display: block;
 
-    width: 4em;
-    height: .12em;
-    margin: .8em auto;
+    width: 4.545454545454546em;
+    height: .136363636363636em;
+    margin: .909090909090909em auto;
 
     content: '';
 

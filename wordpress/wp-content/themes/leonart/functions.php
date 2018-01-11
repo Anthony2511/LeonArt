@@ -2,6 +2,7 @@
 
 add_action('init', 'wp_register_types');
 add_theme_support('post-thumbnails');
+add_image_size( 'thumb-home-artistes', 272, 211, true );
 
 
 // Define shortcut path
