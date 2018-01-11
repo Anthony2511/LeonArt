@@ -27,7 +27,7 @@
       <?php global $post; $thePostID = $post->ID; ?>
       <?php foreach (b_get_menu_items('main-nav') as $navItem): ?>
         <li class="nav__item">
-            <a class="nav__link" href="<?= $navItem->url;?>" title="Vers la page d'accueil"><span class="nav__span <?php echo $thePostID == $navItem->id ? "nav__span--active" : "" ;?>"><?php echo $navItem->label;?></span></a>
+            <a class="nav__link" href="<?= $navItem->url;?>" title="Vers la page <?php the_title(); ?>"><span class="nav__span <?php echo $thePostID == $navItem->id ? "nav__span--active" : "" ;?>"><?php echo $navItem->label;?></span></a>
         </li>
         <?php endforeach; ?>
     </ul>
