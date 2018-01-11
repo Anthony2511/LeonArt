@@ -111,7 +111,7 @@ function b_get_menu_items( $location )
 }
 
 // Return a custom excerpt for given length
-function ma_get_the_excerpt($length = null) {
+function wp_get_the_excerpt($length = null) {
     $excerpt = get_the_excerpt();
     if(is_null($length) || strlen($excerpt) <= $length) return $excerpt;
     $string = '';
@@ -125,6 +125,19 @@ function ma_get_the_excerpt($length = null) {
 }
 
  // Output a custom excerpt for given length
-function ma_the_excerpt($length = null) {
+function wp_the_excerpt($length = null) {
     echo ma_get_the_excerpt($length);
+}
+
+//Recupérer termes taxonomies
+function wp_get_taxonomies($postID, $taxonomyName){
+    $terms = wp_get_post_terms($postID, $taxonomyName);
+    $count = count($terms);
+    $taxonomies = '';
+    for($i = 0; $i < $count; $i++) {
+        if($i == $count - 1) {
+            $taxonomies .= $terms[$i]->name;
+        } 
+    }
+    return $taxonomies;
 }

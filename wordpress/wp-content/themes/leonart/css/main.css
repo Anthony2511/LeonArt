@@ -443,20 +443,28 @@ body
 {
     position: relative;
 }
+.home__single-img
+{
+    max-width: 100%;
+}
 .home__artistes-button
 {
     font-size: 1.25em;
     font-weight: 600;
 
+    position: relative;
+
     display: -webkit-flex;
     display: -ms-flexbox;
     display:         flex;
+    overflow: hidden;
             flex-direction: row;
 
     max-width: 35%;
     margin: 0 auto;
     padding: 1em 2em;
 
+    transition: .3s all ease-in-out;
     text-transform: uppercase;
 
     color: #851c47;
@@ -468,6 +476,31 @@ body
     -webkit-justify-content: center;
     -ms-flex-pack: center;
             justify-content: center;
+}
+.home__artistes-button > span
+{
+    position: relative;
+    z-index: 10;
+}
+.home__artistes-button:before
+{
+    position: absolute;
+    z-index: 5;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    width: 150%;
+    height: 110%;
+
+    content: '';
+    transition: .5s all ease-in-out;
+    -webkit-transform: translateX(-110%) skewX(-45deg);
+        -ms-transform: translateX(-110%) skewX(-45deg);
+            transform: translateX(-110%) skewX(-45deg);
+
+    background-color: #851c47;
 }
 .home__single-artiste + .home__single-artiste
 {
@@ -502,12 +535,7 @@ body
     font-size: 1.375em;
     font-weight: 600;
 
-    padding: .909090909090909em .454545454545455em;
-
-    text-align: center;
-
     color: #434343;
-    background-color: #fff;
 }
 .home__single-name:after
 {
@@ -520,6 +548,20 @@ body
     content: '';
 
     background-color: #434343;
+}
+.home__artistes-titleBloc
+{
+    padding: .909090909090909em .454545454545455em;
+
+    text-align: center;
+
+    background-color: #fff;
+}
+.home__artist-taxonomy
+{
+    font-weight: 500;
+
+    color: #851c47;
 }
 .home__artistes-opacity
 {
@@ -577,6 +619,19 @@ body
     transition: .3s ease-in-out;
 
     opacity: 1;
+}
+.home__artistes-button:hover:before
+{
+    transition: .3s all ease-in-out;
+    -webkit-transform: translateX(-10%);
+        -ms-transform: translateX(-10%);
+            transform: translateX(-10%);
+}
+.home__artistes-button:hover .span
+{
+    transition: .3s all ease-in-out;
+
+    color: #fff;
 }
 .nav
 {

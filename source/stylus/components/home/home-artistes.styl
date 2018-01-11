@@ -14,6 +14,8 @@
     margin-bottom: s(50,16)
   &__artiste-img
     position: relative
+  &__single-img
+    max-width 100%
   &__artistes-button
     background-color: $darkYellow
     color: $mediumRed
@@ -27,6 +29,26 @@
     justify-content: center
     max-width: 35%
     margin: 0 auto
+    position: relative
+    transition: 0.3s all ease-in-out
+    overflow: hidden
+    & > span
+      position: relative
+      z-index: 10
+    &:before
+      content: ''
+      position: absolute
+      top: 0
+      right: 0
+      left: 0
+      bottom: 0
+      height: 110%
+      width: 150%
+      transition: 0.5s all ease-in-out
+      background-color: $mediumRed
+      transform translateX(-110%) skewX(-45deg)
+      z-index: 5
+   
   &__single-artiste + &__single-artiste
     margin-left: s(50,16)
   &__single-artiste
@@ -45,10 +67,7 @@
   &__single-name
     font-family: 'opensans'
     font-size: s(22,16)
-    background-color: $white
-    padding: s(20,22) s(10,22)
     font-weight: 600
-    text-align: center
     color: $darkGrey
     &:after
       content: ''
@@ -57,6 +76,13 @@
       height: s(3,22)
       margin: s(20,22) auto
       background-color: $darkGrey
+  &__artistes-titleBloc
+    background-color: $white
+    padding: s(20,22) s(10,22)
+    text-align: center
+  &__artist-taxonomy
+    color: $mediumRed
+    font-weight 500
   &__artistes-opacity
     position: absolute
     top: 0
@@ -82,15 +108,20 @@
     top: 50%
     opacity: 0
     transition: 0.3s ease-in-out 
-    
-    
-
+  
 .home__single-artiste:hover .home__artistes-opacity
   background-color: rgba(67, 67, 67, 0.5)
   transition: 0.3s ease-in-out
 .home__single-artiste:hover .home__artiste-hover
   opacity: 1
   transition: 0.3s ease-in-out
+.home__artistes-button:hover:before
+  transform translateX(-10%)
+  transition: 0.3s all ease-in-out
+
+.home__artistes-button:hover .span
+  color: $white
+  transition: 0.3s all ease-in-out
 
 
 

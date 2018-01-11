@@ -15,7 +15,7 @@ Template Name: Page d’accueil
     <div class="home__artistes-bloc">
       <?php $posts = new WP_Query( ['posts_per_page' => 4, 'post_type' => 'artistes'] ); ?>
       <?php if($posts->have_posts()) : while($posts->have_posts()): $posts->the_post();?>
-      <section class="home__single-artiste">
+      <div class="home__single-artiste">
       <?php $homeArtist = get_field('artiste__photo'); ?>
         <figure class="home__artiste-img">
           <?php if( !empty($homeArtist) ): ?>
@@ -27,14 +27,19 @@ Template Name: Page d’accueil
              <a href="<?php the_permalink(); ?>" class="home__artiste-hover"><?= __('Voir l\'artiste', 'wp'); ?></a>
           </div>
         </figure>
-        <h3 class="home__single-name" aria-level="3" role="heading"><?php the_title(); ?></h3>
-        <a href="#" class="home__artistes-link" title="Vers la page de l'artiste : <?php the_title(); ?>"><span><?= __('Vers l\'artiste : Leonardo DiCaprio','wp'); ?></span></a>
-      </section>
+        <section class="home__artistes-titleBloc">
+          <h3 class="home__single-name" aria-level="3" role="heading"><?php the_title(); ?></h3>
+          <?php $artistID = $post->ID; ?>
+          <?php if(wp_get_taxonomies($artistID, 'places')): ?>
+            <span class="home__artist-taxonomy"><?= wp_get_taxonomies($artistID, 'places'); ?></span>
+          <?php endif; ?>
+        </section>
+        <a href="<?php the_permalink(); ?>" class="home__artistes-link" title="Vers la page de l'artiste : <?php the_title(); ?>"><span><?= __('Vers l\'artiste : Leonardo DiCaprio','wp'); ?></span></a>
+      </div>
       <?php wp_reset_postdata(); ?> 
       <?php endwhile; endif; ?>
-     
     </div>
-    <a href="#" class="home__artistes-button">Voir tous les artistes</a>
+    <a href="#" class="home__artistes-button"><span class="span"><?= __('Voir tous les artistes', 'wp'); ?></span></a>
   </section>
 
 
