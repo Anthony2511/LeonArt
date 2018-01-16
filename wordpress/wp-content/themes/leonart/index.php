@@ -41,5 +41,32 @@ Template Name: Page d’accueil
     </div>
     <a href="#" class="home__artistes-button" title="Vers la page de tous les artistes"><span class="span"><?= __('Voir tous les artistes', 'wp'); ?></span></a>
   </section>
+  <div class="home__programmes">
+    <section class="home__programmes-bloc wrap">
+      <h2 class="home__artistes-title title-white" aria-level="2" role="heading"><?= __('Notre programme','wp'); ?></h2>
+      <?php $posts = new WP_Query( ['posts_per_page' => 2, 'post_type' => 'activites'] ); ?>
+      <?php if($posts->have_posts()) : while($posts->have_posts()): $posts->the_post();?>
+      <div class="home__programmes-single">
+        <?php $homeProgrammes = get_field('event__photo'); ?>
+        <figure class="home__programmes-figure">
+          <?php if( !empty($homeProgrammes) ): ?>
+            <?php $size = 'thumb-home-programmes';
+                  $thumb = $homeProgrammes['sizes'][ $size ]; ?>
+          <img class="home__programmes-img" src="<?= $thumb; ?>" width="421" height="312" alt="<?= $homeProgrammes['alt']; ?>">
+          <?php endif; ?>
+        </figure>
+        <section class="home__programmes-infos">
+          <h3 class="home__programmes-title" aria-level="3" role="heading"></h3><?= the_title(); ?></h3>
+          <div class="home__programmes-time">
+            <time class="home__programmes-date" datetime="2018-09-30"><?= get_field('event__time'); ?></time>
+            <a href="#" class="home__programmes-lieu">Le magasin</a>
+          </div>
+          <a href="#"><?= __('En savoir plus','wp'); ?></a>
+        </section>
+      </div>
+      <?php wp_reset_postdata(); ?> 
+      <?php endwhile; endif; ?>
+    </section>
+  </div>
 
 	<?php include('footer.php'); ?>

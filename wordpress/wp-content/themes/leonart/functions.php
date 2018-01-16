@@ -3,6 +3,7 @@
 add_action('init', 'wp_register_types');
 add_theme_support('post-thumbnails');
 add_image_size( 'thumb-home-artistes', 272, 211, true );
+add_image_size( 'thumb-home-programmes', 421, 312, true );
 
 
 // Define shortcut path
@@ -39,8 +40,8 @@ function wp_register_types() {
   register_post_type( 'activites', [
               'label' => 'Activités',
               'labels' => [
-                          'singular_name' => 'activites',
-                          'add_new' =>'Ajouter un nouvel artiste'
+                          'singular_name' => 'activite',
+                          'add_new' =>'Ajouter une nouvelle activité'
                     ],
               'description' => 'Permet d\'afficher les différents types d\'activités',
               'public' => true,
