@@ -13,7 +13,7 @@ Template Name: Page d’accueil
   <section class="home__artistes wrap">
     <h2 class="home__artistes-title title-red" aria-level="2" role="heading"><?= __('Quelques artistes','wp'); ?></h2>
     <div class="home__artistes-bloc">
-      <?php $posts = new WP_Query( ['posts_per_page' => 4, 'post_type' => 'artistes'] ); ?>
+      <?php $posts = new WP_Query( ['posts_per_page' => 3, 'post_type' => 'artistes'] ); ?>
       <?php if($posts->have_posts()) : while($posts->have_posts()): $posts->the_post();?>
       <div class="home__single-artiste">
       <?php $homeArtist = get_field('artiste__photo'); ?>
@@ -39,9 +39,7 @@ Template Name: Page d’accueil
       <?php wp_reset_postdata(); ?> 
       <?php endwhile; endif; ?>
     </div>
-    <a href="#" class="home__artistes-button"><span class="span"><?= __('Voir tous les artistes', 'wp'); ?></span></a>
+    <a href="#" class="home__artistes-button" title="Vers la page de tous les artistes"><span class="span"><?= __('Voir tous les artistes', 'wp'); ?></span></a>
   </section>
-
-
 
 	<?php include('footer.php'); ?>

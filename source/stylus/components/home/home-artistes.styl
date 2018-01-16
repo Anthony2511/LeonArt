@@ -1,6 +1,6 @@
 .home
   &__artistes
-    padding: s(100,16) 0
+    padding: s(100,16) s(20,16)
   &__artistes-title
     font-size: s(50,16)
     font-family: 'firasans'
@@ -11,7 +11,9 @@
   &__artistes-bloc
     display: flex
     flex-direction: row
+    justify-content: center
     margin-bottom: s(50,16)
+    column-count: 2
   &__artiste-img
     position: relative
   &__single-img
@@ -48,7 +50,6 @@
       background-color: $mediumRed
       transform translateX(-110%) skewX(-45deg)
       z-index: 5
-   
   &__single-artiste + &__single-artiste
     margin-left: s(50,16)
   &__single-artiste
@@ -118,10 +119,60 @@
 .home__artistes-button:hover:before
   transform translateX(-10%)
   transition: 0.3s all ease-in-out
-
 .home__artistes-button:hover .span
   color: $white
   transition: 0.3s all ease-in-out
+
+@media screen and ( max-width: 1024px)
+  .home
+    &__artistes-button
+      font-size: s(16,16)
+      max-width 40%
+
+@media screen and ( max-width: 950px)
+  .home
+    &__single-name
+      font-size: s(18,16)
+    &__artist-taxonomy
+      font-size: s(14,16)
+
+@media screen and ( max-width: 850px)
+  .home
+    &__artistes-button
+      font-size: s(14,16)
+
+@media screen and ( max-width: 800px)
+  .home
+    &__artistes-bloc
+      display: flex
+      flex-direction: column
+      justify-content: center
+      align-items: center
+    &__single-artiste + &__single-artiste
+      margin s(50,16) 0 0
+    &__artistes-title
+      font-size: s(40,16)
+    &__artistes-button
+      max-width 50%
+
+@media screen and ( max-width: 600px)
+  .home
+    &__artistes-button
+      max-width 60%
+
+@media screen and ( max-width: 500px)
+  .home
+    &__artistes-title
+        font-size: s(30,16)
+    &__artistes-button
+      max-width 70%
+
+@media screen and ( max-width: 375px)
+  .home
+    &__artistes-button
+      max-width 100%
+
+    
 
 
 

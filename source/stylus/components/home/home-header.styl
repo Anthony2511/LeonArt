@@ -50,6 +50,32 @@
     border-radius: s(10,18)
     padding: s(15,18) s(40,18)
     max-width: s(234,18)
+    position: relative
+    transition: 0.3s all ease-in-out
+    overflow: hidden
+    & > span
+      position: relative
+      z-index: 20
+    &:before
+      content: ''
+      position: absolute
+      top: 0
+      left: 0
+      right: 0
+      bottom: 0
+      height: 100%
+      width: 150%
+      transition: 0.5s all ease-in-out
+      background-color: $white
+      transform translateX(-110%) skewX(-45deg)
+      z-index: 5
+
+.header-home__link:hover:before
+  transform translateX(-10%)
+  transition: 0.3s all ease-in-out
+.header-home__link:hover .home-span
+  color: $mediumRed
+  transition: 0.3s all ease-in-out
 
 @media screen and ( max-width: 1300px)
   .header-home

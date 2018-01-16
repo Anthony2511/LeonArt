@@ -339,14 +339,57 @@ body
     font-size: 1.125em;
     font-weight: 700;
 
+    position: relative;
+
+    overflow: hidden;
+
     max-width: 13em;
     padding: .833333333333333em 2.222222222222222em;
 
+    transition: .3s all ease-in-out;
     text-transform: uppercase;
 
     border: .111111111111111em solid #fff;
     border-radius: .555555555555556em;
     background-color: rgba(255,255,255,.1);
+}
+.header-home__link > span
+{
+    position: relative;
+    z-index: 20;
+}
+.header-home__link:before
+{
+    position: absolute;
+    z-index: 5;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    width: 150%;
+    height: 100%;
+
+    content: '';
+    transition: .5s all ease-in-out;
+    -webkit-transform: translateX(-110%) skewX(-45deg);
+        -ms-transform: translateX(-110%) skewX(-45deg);
+            transform: translateX(-110%) skewX(-45deg);
+
+    background-color: #fff;
+}
+.header-home__link:hover:before
+{
+    transition: .3s all ease-in-out;
+    -webkit-transform: translateX(-10%);
+        -ms-transform: translateX(-10%);
+            transform: translateX(-10%);
+}
+.header-home__link:hover .home-span
+{
+    transition: .3s all ease-in-out;
+
+    color: #851c47;
 }
 @media screen and (max-width: 1300px)
 {
@@ -413,7 +456,7 @@ body
 }
 .home__artistes
 {
-    padding: 6.25em 0;
+    padding: 6.25em 1.25em;
 }
 .home__artistes-title
 {
@@ -438,6 +481,12 @@ body
 
     -webkit-flex-direction: row;
         -ms-flex-direction: row;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-column-count: 2;
+       -moz-column-count: 2;
+            column-count: 2;
 }
 .home__artiste-img
 {
@@ -632,6 +681,89 @@ body
     transition: .3s all ease-in-out;
 
     color: #fff;
+}
+@media screen and (max-width: 1024px)
+{
+    .home__artistes-button
+    {
+        font-size: 1em;
+
+        max-width: 40%;
+    }
+}
+@media screen and (max-width: 950px)
+{
+    .home__single-name
+    {
+        font-size: 1.125em;
+    }
+    .home__artist-taxonomy
+    {
+        font-size: .875em;
+    }
+}
+@media screen and (max-width: 850px)
+{
+    .home__artistes-button
+    {
+        font-size: .875em;
+    }
+}
+@media screen and (max-width: 800px)
+{
+    .home__artistes-bloc
+    {
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display:         flex;
+                flex-direction: column;
+
+        -webkit-flex-direction: column;
+            -ms-flex-direction: column;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+                align-items: center;
+    }
+    .home__single-artiste + .home__single-artiste
+    {
+        margin: 3.125em 0 0;
+    }
+    .home__artistes-title
+    {
+        font-size: 2.5em;
+    }
+    .home__artistes-button
+    {
+        max-width: 50%;
+    }
+}
+@media screen and (max-width: 600px)
+{
+    .home__artistes-button
+    {
+        max-width: 60%;
+    }
+}
+@media screen and (max-width: 500px)
+{
+    .home__artistes-title
+    {
+        font-size: 1.875em;
+    }
+    .home__artistes-button
+    {
+        max-width: 70%;
+    }
+}
+@media screen and (max-width: 375px)
+{
+    .home__artistes-button
+    {
+        max-width: 100%;
+    }
 }
 .nav
 {
