@@ -1,15 +1,26 @@
 /*
 
-Theme Name: Léon'Art
+Theme Name: LéonArt
 Theme URI: http://www.beaumecker.be/mariam-faso
 Author: Anthony Beaumecker
 Author URI: http://www.beaumecker.be/mariam-faso
-Description: Thème pour l'ASBL Léon'Art
+Description: Thème pour l'ASBL LéonArt
 Version: 1.0
 Text Domain: dw
 
 */
 
-.sticky {}          /* DO NOT EDIT THIS */
-.gallery-caption {} /* THESE ARE USELESS */
-.bypostauthor {}    /* THEY ARE ONLY TO KEEP THEME CHECK HAPPY */
+.sticky {}
+
+
+/* DO NOT EDIT THIS */
+
+.gallery-caption {}
+
+
+/* THESE ARE USELESS */
+
+.bypostauthor {}
+
+
+/* THEY ARE ONLY TO KEEP THEME CHECK HAPPY */

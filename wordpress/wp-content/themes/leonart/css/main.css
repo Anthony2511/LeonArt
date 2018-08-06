@@ -485,7 +485,6 @@ body
     -ms-flex-pack: center;
             justify-content: center;
     -webkit-column-count: 2;
-       -moz-column-count: 2;
             column-count: 2;
 }
 .home__artiste-img
@@ -790,10 +789,58 @@ body
 
     background-color: rgba(133,28,71,.9);
 }
+.home__programmes-single
+{
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display:         flex;
+            flex-direction: row;
+
+    margin-bottom: 4.0625em;
+
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+            justify-content: center;
+}
 .home__programmes-bloc
 {
     position: relative;
     z-index: 20;
+}
+.home__programmes-left
+{
+    position: relative;
+
+    margin-right: 6.25em;
+}
+.home__programmes-taxonomy
+{
+    font-size: 1em;
+    font-weight: 400;
+
+    position: absolute;
+    top: -.9375em;
+    left: -1.875em;
+
+    padding: .625em 2.5em;
+
+    color: #851c47;
+    background-color: #ffc652;
+}
+.home__programmes-infos
+{
+    color: #fff;
+}
+.home__programmes-title
+{
+    font-family: 'firasans';
+    font-size: 3.125em;
+}
+.home__programmes-lieu
+{
+    display: block;
 }
 .nav
 {
