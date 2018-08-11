@@ -1,13 +1,6 @@
 .home
   &__artistes
     padding: s(100,16) s(20,16)
-  &__artistes-title
-    font-size: s(50,16)
-    font-family: 'firasans'
-    font-weight: 800
-    color: $darkGrey
-    text-align: center
-    margin-bottom: s(50,50)
   &__artistes-bloc
     display: flex
     flex-direction: row
@@ -150,8 +143,6 @@
       align-items: center
     &__single-artiste + &__single-artiste
       margin s(50,16) 0 0
-    &__artistes-title
-      font-size: s(40,16)
     &__artistes-button
       max-width 50%
 
@@ -162,8 +153,6 @@
 
 @media screen and ( max-width: 500px)
   .home
-    &__artistes-title
-        font-size: s(30,16)
     &__artistes-button
       max-width 70%
 

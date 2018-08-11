@@ -1,3 +1,10 @@
+.title
+  font-size: s(50,16)
+  font-family: 'firasans'
+  font-weight: 800
+  color: $darkGrey
+  text-align: center
+  margin : s(50,50) 0
 .title-red
   &:before
   &:after
@@ -27,3 +34,11 @@
     margin-bottom: s(15,50)
   &:after
     margin-top: s(15,50)
+
+@media screen and (max-width 800px)
+  .title
+    font-size: s(40,16)
+
+@media screen and (max-width 500px)
+  .title
+    font-size: s(30,16)

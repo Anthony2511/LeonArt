@@ -13,7 +13,7 @@ Template Name: Page d’accueil
 
   <!-- Liste des artistes -->
   <section class="home__artistes wrap">
-    <h2 class="home__artistes-title title-red" aria-level="2" role="heading"><?= __('Quelques artistes','wp'); ?></h2>
+    <h2 class="title title-red" aria-level="2" role="heading"><?= __('Quelques artistes','wp'); ?></h2>
     <div class="home__artistes-bloc">
       <?php $posts = new WP_Query( ['posts_per_page' => 3, 'post_type' => 'artistes'] ); ?>
       <?php if($posts->have_posts()) : while($posts->have_posts()): $posts->the_post();?>

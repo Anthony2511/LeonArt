@@ -467,18 +467,6 @@ body
 {
     padding: 6.25em 1.25em;
 }
-.home__artistes-title
-{
-    font-family: 'firasans';
-    font-size: 3.125em;
-    font-weight: 800;
-
-    margin-bottom: 1em;
-
-    text-align: center;
-
-    color: #434343;
-}
 .home__artistes-bloc
 {
     display: -webkit-flex;
@@ -739,10 +727,6 @@ body
     {
         margin: 3.125em 0 0;
     }
-    .home__artistes-title
-    {
-        font-size: 2.5em;
-    }
     .home__artistes-button
     {
         max-width: 50%;
@@ -757,10 +741,6 @@ body
 }
 @media screen and (max-width: 500px)
 {
-    .home__artistes-title
-    {
-        font-size: 1.875em;
-    }
     .home__artistes-button
     {
         max-width: 70%;
@@ -1171,6 +1151,18 @@ body
         margin-left: .625em;
     }
 }
+.title
+{
+    font-family: 'firasans';
+    font-size: 3.125em;
+    font-weight: 800;
+
+    margin: 1em 0;
+
+    text-align: center;
+
+    color: #434343;
+}
 .title-red:before,
 .title-red:after
 {
@@ -1220,6 +1212,20 @@ body
 .title-white:after
 {
     margin-top: .3em;
+}
+@media screen and (max-width: 800px)
+{
+    .title
+    {
+        font-size: 2.5em;
+    }
+}
+@media screen and (max-width: 500px)
+{
+    .title
+    {
+        font-size: 1.875em;
+    }
 }
 .header-page
 {
