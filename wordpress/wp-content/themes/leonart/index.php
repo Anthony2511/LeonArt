@@ -15,7 +15,7 @@ Template Name: Page d’accueil
   <section class="home__artistes wrap">
     <h2 class="title title-red" aria-level="2" role="heading"><?= __('Quelques artistes','wp'); ?></h2>
     <div class="home__artistes-bloc">
-      <?php $posts = new WP_Query( ['posts_per_page' => 3, 'post_type' => 'artistes'] ); ?>
+      <?php $posts = new WP_Query( ['posts_per_page' => 3, 'post_type' => 'artistes', 'orderby' => 'rand'] ); ?>
       <?php if($posts->have_posts()) : while($posts->have_posts()): $posts->the_post();?>
       <div class="home__single-artiste">
       <?php $homeArtist = get_field('artiste__photo'); ?>
@@ -41,13 +41,13 @@ Template Name: Page d’accueil
       <?php wp_reset_postdata(); ?> 
       <?php endwhile; endif; ?>
     </div>
-    <a href="#" class="home__artistes-button" title="Vers la page de tous les artistes"><span class="span"><?= __('Voir tous les artistes', 'wp'); ?></span></a>
+    <a href="<?php the_permalink(54); ?>" class="home__artistes-button" title="Vers la page de tous les artistes"><span class="span"><?= __('Voir tous les artistes', 'wp'); ?></span></a>
   </section>
 
   <!-- Liste des programmes -->
   <div class="home__programmes">
     <section class="home__programmes-bloc wrap">
-      <h2 class="home__artistes-title title-white" aria-level="2" role="heading"><?= __('Notre agenda','wp'); ?></h2>
+      <h2 class="title title-white" aria-level="2" role="heading"><?= __('Notre agenda','wp'); ?></h2>
       <?php $posts = new WP_Query( ['posts_per_page' => 2, 'post_type' => 'activites'] ); ?>
       <?php if($posts->have_posts()) : while($posts->have_posts()): $posts->the_post();?>
      <?php $programmmesHome = get_fields($post->ID); ?>

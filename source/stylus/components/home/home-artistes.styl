@@ -4,9 +4,14 @@
   &__artistes-bloc
     display: flex
     flex-direction: row
-    justify-content: center
+    justify-content: space-evenly
     margin-bottom: s(50,16)
-    column-count: 2
+  &__artistes-bloc-page
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    margin-bottom: s(50,16)
+    flex-wrap: wrap
   &__artiste-img
     position: relative
   &__single-img
@@ -43,8 +48,6 @@
       background-color: $mediumRed
       transform translateX(-110%) skewX(-45deg)
       z-index: 5
-  &__single-artiste + &__single-artiste
-    margin-left: s(50,16)
   &__single-artiste
     position: relative
   &__artistes-link
@@ -116,6 +119,10 @@
   color: $white
   transition: 0.3s all ease-in-out
 
+.artistes-margin
+  margin-bottom s(50)
+
+
 @media screen and ( max-width: 1024px)
   .home
     &__artistes-button
@@ -137,6 +144,7 @@
 @media screen and ( max-width: 800px)
   .home
     &__artistes-bloc
+    &__artistes-bloc-page
       display: flex
       flex-direction: column
       justify-content: center

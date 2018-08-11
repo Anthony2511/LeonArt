@@ -478,11 +478,27 @@ body
 
     -webkit-flex-direction: row;
         -ms-flex-direction: row;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-column-count: 2;
-            column-count: 2;
+    -webkit-justify-content: space-evenly;
+    -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+}
+.home__artistes-bloc-page
+{
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display:         flex;
+            flex-direction: row;
+
+    margin-bottom: 3.125em;
+
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
 }
 .home__artiste-img
 {
@@ -546,10 +562,6 @@ body
             transform: translateX(-110%) skewX(-45deg);
 
     background-color: #851c47;
-}
-.home__single-artiste + .home__single-artiste
-{
-    margin-left: 3.125em;
 }
 .home__single-artiste
 {
@@ -678,6 +690,10 @@ body
 
     color: #fff;
 }
+.artistes-margin
+{
+    margin-bottom: 3.125em;
+}
 @media screen and (max-width: 1024px)
 {
     .home__artistes-button
@@ -707,7 +723,8 @@ body
 }
 @media screen and (max-width: 800px)
 {
-    .home__artistes-bloc
+    .home__artistes-bloc,
+    .home__artistes-bloc-page
     {
         display: -webkit-flex;
         display: -ms-flexbox;
