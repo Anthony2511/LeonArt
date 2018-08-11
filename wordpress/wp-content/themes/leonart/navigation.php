@@ -22,8 +22,12 @@
           </g>
         </g>
       </svg>
+      <?php if(!is_front_page () && !is_home ()): ?>
+        <h3 class="nav__bloc-title">Saint Leon'Art</h3>
+      <?php else: ?>
+      <?php endif; ?>
     </a>
-    <ul class="nav__menu">
+    <ul class="nav__menu <?php if(!is_front_page () && !is_home ()): ?> menu-page<?php else: ?><?php endif; ?>">
       <?php global $post; $thePostID = $post->ID; ?>
       <?php foreach (b_get_menu_items('main-nav') as $navItem): ?>
         <li class="nav__item">

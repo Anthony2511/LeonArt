@@ -1,3 +1,6 @@
+.menu-page
+  position relative
+  top: 30px
 .nav
   font-size: s(16,16)
   font-weight: 500
@@ -12,10 +15,18 @@
   text-align: right
   &__logo
     max-width: s(60,16)
-    height: auto
+    height: s(68,16)
+  &__bloc-link
     position: absolute
     left: 0
     top: s(-20,16)
+    text-align: center
+    max-width s(104,16)
+  &__bloc-title
+    font-family: 'whoopass'
+    font-size: s(18)
+    letter-spacing: 0.2em
+    margin-top: s(10,18)
   &__item
     display: inline-block
     padding-bottom: s(5,16)
@@ -114,7 +125,7 @@
 @media screen and ( max-width: 1300px)
   .nav
     margin-right: s(20,16)
-    &__logo
+    &__bloc-link
       margin-left: s(20,16)
 
 @media screen and ( max-width: 1024px)
@@ -123,7 +134,7 @@
     margin-right: 0
     &__logo
       max-width: s(40,16)
-      height: auto
+      height: s(48,16)
     &__item
       display: block
       text-align: center
@@ -133,7 +144,7 @@
     &__button
       display inline-block
       position: absolute
-      top: s(-40,16)
+      top: s(-30,16)
       text-align: right
       cursor pointer
     &__bloc
@@ -143,6 +154,12 @@
       padding 0
       overflow: hidden
       transition .5s height ease
+    &__bloc-link
+      max-width 100%
+      display flex
+      align-items: center
+    &__bloc-title
+      margin-left: s(20,16)
     &__link
       display block
       margin-right: 0
@@ -156,3 +173,9 @@
       transition .5s transform ease
       transform rotate(0deg)
       top s(12,22)
+
+@media screen and (max-width: 350px)
+  .nav
+    &__bloc-title
+      font-size s(16)
+      margin-left: s(10)

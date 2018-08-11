@@ -800,9 +800,9 @@ body
 
     -webkit-flex-direction: row;
         -ms-flex-direction: row;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-            justify-content: center;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+            justify-content: flex-start;
 }
 .home__programmes-bloc
 {
@@ -842,6 +842,11 @@ body
 {
     display: block;
 }
+.menu-page
+{
+    position: relative;
+    top: 30px;
+}
 .nav
 {
     font-size: 1em;
@@ -862,12 +867,27 @@ body
 }
 .nav__logo
 {
+    max-width: 3.75em;
+    height: 4.25em;
+}
+.nav__bloc-link
+{
     position: absolute;
     top: -1.25em;
     left: 0;
 
-    max-width: 3.75em;
-    height: auto;
+    max-width: 6.5em;
+
+    text-align: center;
+}
+.nav__bloc-title
+{
+    font-family: 'whoopass';
+    font-size: 1.125em;
+
+    margin-top: .555555555555556em;
+
+    letter-spacing: .2em;
 }
 .nav__item
 {
@@ -1039,7 +1059,7 @@ body
     {
         margin-right: 1.25em;
     }
-    .nav__logo
+    .nav__bloc-link
     {
         margin-left: 1.25em;
     }
@@ -1054,7 +1074,7 @@ body
     .nav__logo
     {
         max-width: 2.5em;
-        height: auto;
+        height: 3em;
     }
     .nav__item
     {
@@ -1070,7 +1090,7 @@ body
     .nav__button
     {
         position: absolute;
-        top: -2.5em;
+        top: -1.875em;
 
         display: inline-block;
 
@@ -1088,6 +1108,22 @@ body
         transition: .5s height ease;
 
         background-color: $lightBlue;
+    }
+    .nav__bloc-link
+    {
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display:         flex;
+
+        max-width: 100%;
+
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+                align-items: center;
+    }
+    .nav__bloc-title
+    {
+        margin-left: 1.25em;
     }
     .nav__link
     {
@@ -1115,6 +1151,15 @@ body
         -webkit-transform: rotate(0deg);
             -ms-transform: rotate(0deg);
                 transform: rotate(0deg);
+    }
+}
+@media screen and (max-width: 350px)
+{
+    .nav__bloc-title
+    {
+        font-size: 1em;
+
+        margin-left: .625em;
     }
 }
 .title-red:before,
@@ -1166,6 +1211,19 @@ body
 .title-white:after
 {
     margin-top: .3em;
+}
+.header-page
+{
+    padding: 3.125em 1.25em 7.5em;
+
+    background-color: #851c47;
+}
+@media screen and (max-width: 1024px)
+{
+    .header-page
+    {
+        padding: 3.375em 1.25em;
+    }
 }
 .wrap
 {

@@ -2,6 +2,7 @@ Plan/Stratégie/SchémaLéonArt.ai
 Plan/TypoCouleurs.ai
 Plan/DesignLeonArt.xd
 node_modules
+package-lock.json
 wordpress/*
 !wordpress/wp-content/
 wordpress/wp-content/*

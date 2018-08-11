@@ -69,10 +69,15 @@ Template Name: Page d’accueil
         <section class="home__programmes-infos">
           <h3 class="home__programmes-title" aria-level="3" role="heading"></h3><?= the_title(); ?></h3>
           <div class="home__programmes-time">
-            <time class="home__programmes-date" datetime="2018-09-30"><?= $programmmesHome['event__time']; ?></time>
+            <time class="home__programmes-date" datetime="2018-09-30">
+            <?= $programmmesHome['event__time']; ?>, <?= $programmmesHome['event__hour-start']; ?>
+            <?php if ($programmmesHome['event__hour-end'] != null): ?>
+            - <?= $programmmesHome['event__hour-end']; ?>
+            <?php else: ?>
+            <?php endif; ?>
+            </time>
             <a href="#" class="home__programmes-lieu">Le magasin</a>
           </div>
-          <a href="#"><?= __('En savoir plus','wp'); ?></a>
         </section>
       </div>
       <?php wp_reset_postdata(); ?> 
