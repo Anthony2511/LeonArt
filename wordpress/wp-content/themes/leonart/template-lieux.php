@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Page Agenda
+Template Name: Page Lieu
 */
 ; ?>
 
@@ -13,3 +13,5 @@ Template Name: Page Agenda
   <section>
     <h2>Test</h2>
   </section>
+
+  <?php include('footer.php'); ?>

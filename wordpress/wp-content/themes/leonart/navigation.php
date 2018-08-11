@@ -11,7 +11,7 @@
     </div>
   </div>
   <div class="nav__bloc">
-    <a href="#" class="nav__bloc-link">
+    <a href="<?= get_home_url(); ?>" class="nav__bloc-link">
       <svg class="nav__logo" xmlns="http://www.w3.org/2000/svg" viewBox="1133 -93.672 66.69 74.15">
         <defs><style>.a{fill:#da4736;}.b{fill:#ffcd79;}.c{fill:#fff;}</style></defs>
         <g transform="translate(303 -325.672)">

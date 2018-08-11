@@ -1,5 +1,30 @@
 .breadcrumb
   background-color: $white
-  & h2
+  padding: 0 s(20)
+  &__list
+    padding: s(20) 0
+  &__item
+    display inline-block
+    font-size: s(18,16)
+    color: $darkGrey
+    font-weight 300
+  .arrow
+    &:after
+      icon('iconArrow')
+      color: $mediumRed
+      font-size: s(12,16)
+      font-weight bold
+      margin: 0 s(10,12)
+  .arrow-left
     &:before
-      icon('iconTel')
+      icon('iconArrow')
+      color: $mediumRed
+      font-size: s(12,16)
+      font-weight bold
+      margin: 0 s(10,12)
+
+@media screen and (max-width:768px)
+  .breadcrumb
+    &__item
+      font-size: s(14,16)
+      

@@ -12,7 +12,6 @@ Template Name: Page Artistes
   <?php include('navigation.php'); ?>
   <section>
     <h2>Test</h2>
-    <p>loremedsfrhegherguherughrtughrztugtuhgrtu</p>
   </section>
 
 	<?php include('footer.php'); ?>
