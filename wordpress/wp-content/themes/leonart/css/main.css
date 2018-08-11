@@ -183,6 +183,15 @@ body
 }
 @font-face
 {
+    font-family: 'icomoon';
+    font-weight: normal;
+    font-style: normal;
+
+    src: url('../fonts/icomoon/icomoon.eot?h31cyw');
+    src: url('../fonts/icomoon/icomoon.eot?h31cyw#iefix') format('embedded-opentype'), url('../fonts/icomoon/icomoon.ttf?h31cyw') format('truetype'), url('../fonts/icomoon/icomoon.woff?h31cyw') format('woff'), url('../fonts/icomoon/icomoon.svg?h31cyw#icomoon') format('svg');
+}
+@font-face
+{
     font-family: 'whoopass';
     font-weight: 800;
     font-style: normal;
@@ -1224,6 +1233,25 @@ body
     {
         padding: 3.375em 1.25em;
     }
+}
+.breadcrumb
+{
+    background-color: #fff;
+}
+.breadcrumb h2:before
+{
+    font-family: 'icomoon';
+    font-weight: normal;
+    font-style: normal;
+    font-variant: normal;
+    line-height: 1;
+
+    content: '\e907';
+    text-transform: none;
+
+    speak: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 .wrap
 {

@@ -1,0 +1,77 @@
+@font-face {
+    font-family: 'icomoon';
+    src: url('fonts/icomoon.eot?h31cyw');
+    src: url('fonts/icomoon.eot?h31cyw#iefix') format('embedded-opentype'), url('fonts/icomoon.ttf?h31cyw') format('truetype'), url('fonts/icomoon.woff?h31cyw') format('woff'), url('fonts/icomoon.svg?h31cyw#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-FlecheAriane:before {
+    content: "\e90a";
+    color: #851c47;
+}
+
+.icon-buttonSite:before {
+    content: "\e906";
+    color: #851c47;
+}
+
+.icon-iconTel:before {
+    content: "\e907";
+    color: #ffc652;
+}
+
+.icon-iconLieu:before {
+    content: "\e908";
+    color: #ffc652;
+}
+
+.icon-iconMail:before {
+    content: "\e909";
+    color: #ffc652;
+}
+
+.icon-iconFacebook:before {
+    content: "\e902";
+    color: #ffc652;
+}
+
+.icon-iconPinterest:before {
+    content: "\e903";
+    color: #ffc652;
+}
+
+.icon-iconTwitter:before {
+    content: "\e904";
+    color: #ffc652;
+}
+
+.icon-calendrier:before {
+    content: "\e905";
+    color: #ffc652;
+}
+
+.icon-location-sign:before {
+    content: "\e901";
+    color: #ffc652;
+}
+
+.icon-iconTime:before {
+    content: "\e900";
+    color: #ffc652;
+}
