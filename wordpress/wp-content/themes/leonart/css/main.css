@@ -848,6 +848,221 @@ body
 {
     display: block;
 }
+.contact
+{
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display:         flex;
+            flex-direction: row;
+
+    padding: 3.125em;
+
+    border-radius: 10px;
+    background-color: #fff;
+
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+            justify-content: space-between;
+}
+.contact__bloc
+{
+    width: 45%;
+}
+.contact__required
+{
+    font-size: .875em;
+    font-weight: 500;
+
+    display: block;
+
+    margin-bottom: 2.142857142857143em;
+
+    color: #851c47;
+}
+.contact__champ
+{
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display:         flex;
+            flex-direction: column;
+
+    margin-bottom: 1.875em;
+
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+}
+.contact__input
+{
+    margin-top: .625em;
+    padding: .625em;
+
+    transition: .3s ease-in-out;
+
+    border: 1px solid transparent;
+    border-radius: 5px;
+    background-color: #f3f3f3;
+}
+.contact__input:hover,
+.contact__input:focus
+{
+    transition: .3s ease-in-out;
+
+    border: 1px solid #851c47;
+}
+.contact__label
+{
+    font-size: 1em;
+    font-weight: 600;
+
+    color: #434343;
+}
+.contact__button
+{
+    font-size: .875em;
+    font-weight: 600;
+
+    padding: 1.071428571428571em 3.571428571428572em;
+
+    cursor: pointer;
+    text-transform: uppercase;
+
+    color: #851c47;
+    border-radius: .714285714285714em;
+    background-color: #ffc652;
+}
+.textarea
+{
+    resize: none;
+}
+.contact__bloc-title
+{
+    font-family: 'firasans';
+    font-size: 1.875em;
+    font-weight: 800;
+
+    margin-bottom: 1em;
+
+    text-align: center;
+
+    color: #434343;
+}
+.contact__bloc-title:before,
+.contact__bloc-title:after
+{
+    display: block;
+
+    width: 5em;
+    height: .033333333333333em;
+    margin: auto;
+
+    content: '';
+
+    background-color: #6d183b;
+}
+.contact__bloc-title:before
+{
+    margin-bottom: .5em;
+}
+.contact__bloc-title:after
+{
+    margin-top: .5em;
+}
+.contact__bloc-infos
+{
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display:         flex;
+            flex-direction: column;
+
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+            align-items: center;
+}
+.contact__infos
+{
+    font-size: 1.125em;
+    font-weight: 500;
+    line-height: 1.3;
+
+    position: relative;
+
+    display: block;
+
+    margin-bottom: 1.666666666666667em;
+    padding-left: 2.777777777777778em;
+
+    color: #434343;
+}
+.contact__infos--mail:before
+{
+    font-family: 'icomoon';
+    font-size: 1.111111111111111em;
+    font-weight: normal;
+    font-style: normal;
+    font-variant: normal;
+    line-height: 1;
+
+    position: absolute;
+    left: 0;
+
+    content: '\e909';
+    text-transform: none;
+
+    color: #851c47;
+
+    speak: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.contact__infos--tel:before
+{
+    font-family: 'icomoon';
+    font-size: 1.111111111111111em;
+    font-weight: normal;
+    font-style: normal;
+    font-variant: normal;
+    line-height: 1;
+
+    position: absolute;
+    left: 0;
+
+    content: '\e907';
+    text-transform: none;
+
+    color: #851c47;
+
+    speak: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.contact__infos--location:before
+{
+    font-family: 'icomoon';
+    font-size: 1.111111111111111em;
+    font-weight: normal;
+    font-style: normal;
+    font-variant: normal;
+    line-height: 1;
+
+    position: absolute;
+    left: 0;
+
+    content: '\e908';
+    text-transform: none;
+
+    color: #851c47;
+
+    speak: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
 .menu-page
 {
     position: relative;
@@ -1241,7 +1456,7 @@ body
 {
     .title
     {
-        font-size: 1.875em;
+        font-size: 0;
     }
 }
 .header-page

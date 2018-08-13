@@ -20,6 +20,7 @@ Template Name: Page Artistes
                             'hide_empty' => true,
                             ]);
                             ?>
+                            
     <form method="GET" id="filter-artists">
         <label for="post-filter-artists">Filtrer les artistes</label>
         <select id="post-filter-artists" name="post-filter-artists">

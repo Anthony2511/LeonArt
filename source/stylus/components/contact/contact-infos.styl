@@ -1,0 +1,55 @@
+.contact
+  &__bloc-title
+    font-size: s(30,16)
+    font-family: 'firasans'
+    font-weight: 800
+    color: $darkGrey
+    margin-bottom: s(30,30)
+    text-align: center
+    &:before
+    &:after
+      content: ''
+      display: block
+      width: s(150,30)
+      height: s(1,30)
+      background-color: $darkRed
+      margin: auto
+    &:before
+      margin-bottom: s(15,30)
+    &:after
+      margin-top: s(15,30)
+  &__bloc-infos
+    display: flex
+    flex-direction column
+    justify-content: flex-start
+    align-items: center
+  &__infos
+    color: $darkGrey
+    font-weight 500
+    font-size: s(18,16)
+    position relative
+    padding-left: s(50,18)
+    margin-bottom: s(30,18)
+    display block
+    line-height: 1.3
+    &--mail
+      &:before
+        icon('iconMail')
+        color: $mediumRed
+        font-size: s(20,18)
+        position absolute
+        left 0
+    &--tel
+      &:before
+        icon('iconTel')
+        color: $mediumRed
+        font-size: s(20,18)
+        position absolute
+        left 0
+    &--location
+      &:before
+        icon('iconAddress')
+        color: $mediumRed
+        font-size: s(20,18)
+        position absolute
+        left 0
