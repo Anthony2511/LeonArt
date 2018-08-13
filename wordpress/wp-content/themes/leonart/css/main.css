@@ -856,7 +856,7 @@ body
             flex-direction: row;
 
     margin-bottom: 3.125em;
-    padding: 3.125em;
+    padding: 2.5em;
 
     border-radius: 10px;
     background-color: #fff;
@@ -942,6 +942,31 @@ body
 .textarea
 {
     resize: none;
+}
+@media screen and (max-width: 768px)
+{
+    .contact
+    {
+                flex-direction: column;
+
+        -webkit-flex-direction: column;
+            -ms-flex-direction: column;
+    }
+    .contact__bloc
+    {
+        width: 100%;
+    }
+    .contact__button
+    {
+        margin: 0 auto;
+    }
+}
+@media screen and (max-width: 450px)
+{
+    .contact
+    {
+        padding: 1.875em;
+    }
 }
 .contact__bloc-title
 {
@@ -1069,6 +1094,20 @@ body
     speak: none;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+}
+@media screen and (max-width: 768px)
+{
+    .contact__bloc-title
+    {
+        margin: 1.875em 0;
+    }
+}
+@media screen and (max-width: 450px)
+{
+    .contact__infos
+    {
+        font-size: 1em;
+    }
 }
 .menu-page
 {
@@ -1575,6 +1614,13 @@ body
     color: #851c47;
     border: 1px solid #851c47;
     border-radius: 5px;
+}
+@media screen and (max-width: 768px)
+{
+    .wpcf7
+    {
+        width: 100%;
+    }
 }
 .wrap
 {
