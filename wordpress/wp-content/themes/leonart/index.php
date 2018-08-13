@@ -36,7 +36,7 @@ Template Name: Page d’accueil
             <span class="home__artist-taxonomy"><?= wp_get_taxonomies($artistID, 'places'); ?></span>
           <?php endif; ?>
         </section>
-        <a href="<?php the_permalink(); ?>" class="home__artistes-link" title="Vers la page de l'artiste : <?php the_title(); ?>"><span><?= __('Vers l\'artiste : Leonardo DiCaprio','wp'); ?></span></a>
+        <a href="<?php the_permalink(); ?>" class="home__artistes-link" title="Vers la page de l'artiste : <?php the_title(); ?>"><span><?= __('Vers l\'artiste : <?php the_title(); ?>','wp'); ?></span></a>
       </div>
       <?php wp_reset_postdata(); ?> 
       <?php endwhile; endif; ?>

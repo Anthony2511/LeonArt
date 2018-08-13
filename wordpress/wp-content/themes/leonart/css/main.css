@@ -855,6 +855,7 @@ body
     display:         flex;
             flex-direction: row;
 
+    margin-bottom: 3.125em;
     padding: 3.125em;
 
     border-radius: 10px;
@@ -893,8 +894,13 @@ body
     -webkit-flex-direction: column;
         -ms-flex-direction: column;
 }
+.contact__champ br
+{
+    display: none;
+}
 .contact__input
 {
+    width: 100%;
     margin-top: .625em;
     padding: .625em;
 
@@ -923,14 +929,15 @@ body
     font-size: .875em;
     font-weight: 600;
 
+    max-width: none;
+    margin: 0;
     padding: 1.071428571428571em 3.571428571428572em;
 
     cursor: pointer;
     text-transform: uppercase;
 
-    color: #851c47;
+    border: none;
     border-radius: .714285714285714em;
-    background-color: #ffc652;
 }
 .textarea
 {
@@ -1456,7 +1463,7 @@ body
 {
     .title
     {
-        font-size: 0;
+        font-size: 1.875em;
     }
 }
 .header-page
@@ -1539,6 +1546,35 @@ body
     {
         font-size: .875em;
     }
+}
+.wpcf7
+{
+    width: 45%;
+}
+.screen-reader-response
+{
+    position: absolute;
+    top: -99999px;
+    left: -99999px;
+}
+.wpcf7-not-valid-tip
+{
+    font-size: .875em;
+    font-weight: 600;
+
+    color: #851c47;
+}
+.wpcf7-validation-errors
+{
+    font-size: .875em;
+    font-weight: 600;
+
+    margin-top: 1.428571428571429em;
+    padding: .714285714285714em;
+
+    color: #851c47;
+    border: 1px solid #851c47;
+    border-radius: 5px;
 }
 .wrap
 {

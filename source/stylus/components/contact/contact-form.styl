@@ -5,6 +5,7 @@
   flex-direction: row
   justify-content: space-between
   padding: s(50)
+  margin-bottom s(50,16)
   &__bloc
     width: 45%
   &__required
@@ -17,6 +18,8 @@
     display flex
     flex-direction: column
     margin-bottom: s(30,16)
+    & br
+      display none
   &__input
     background-color: $lightGrey
     margin-top: s(10,16)
@@ -24,6 +27,7 @@
     border-radius: 5px
     border: 1px solid transparent
     transition: .3s ease-in-out
+    width: 100%
     &:hover
     &:focus
       border 1px solid $mediumRed
@@ -33,14 +37,15 @@
     font-size: s(16,16)
     font-weight 600
   &__button
-    background-color: $darkYellow
-    color: $mediumRed
     font-size: s(14,16)
     font-weight: 600
     padding: s(15,14) s(50,14)
     text-transform: uppercase
     border-radius: s(10,14)
     cursor: pointer
+    margin: 0
+    max-width none
+    border none
 
 .textarea
   resize: none
