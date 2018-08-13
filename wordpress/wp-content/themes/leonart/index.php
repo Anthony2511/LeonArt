@@ -41,7 +41,7 @@ Template Name: Page d’accueil
       <?php wp_reset_postdata(); ?> 
       <?php endwhile; endif; ?>
     </div>
-    <a href="<?php the_permalink(54); ?>" class="home__artistes-button" title="Vers la page de tous les artistes"><span class="span"><?= __('Voir tous les artistes', 'wp'); ?></span></a>
+    <a href="<?php the_permalink(54); ?>" class="button" title="Vers la page de tous les artistes"><span class="span"><?= __('Voir tous les artistes', 'wp'); ?></span></a>
   </section>
 
   <!-- Liste des programmes -->

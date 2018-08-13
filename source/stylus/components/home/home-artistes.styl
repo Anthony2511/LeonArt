@@ -16,38 +16,6 @@
     position: relative
   &__single-img
     max-width 100%
-  &__artistes-button
-    background-color: $darkYellow
-    color: $mediumRed
-    font-size: s(20,16)
-    font-weight: 600
-    padding: s(20,20) s(40,20)
-    text-transform: uppercase
-    border-radius: s(10,20)
-    display: flex
-    flex-direction: row
-    justify-content: center
-    max-width: 35%
-    margin: 0 auto
-    position: relative
-    transition: 0.3s all ease-in-out
-    overflow: hidden
-    & > span
-      position: relative
-      z-index: 10
-    &:before
-      content: ''
-      position: absolute
-      top: 0
-      right: 0
-      left: 0
-      bottom: 0
-      height: 110%
-      width: 150%
-      transition: 0.5s all ease-in-out
-      background-color: $mediumRed
-      transform translateX(-110%) skewX(-45deg)
-      z-index: 5
   &__single-artiste
     position: relative
   &__artistes-link
@@ -112,33 +80,15 @@
 .home__single-artiste:hover .home__artiste-hover
   opacity: 1
   transition: 0.3s ease-in-out
-.home__artistes-button:hover:before
-  transform translateX(-10%)
-  transition: 0.3s all ease-in-out
-.home__artistes-button:hover .span
-  color: $white
-  transition: 0.3s all ease-in-out
 
 .artistes-margin
   margin-bottom s(50)
-
-
-@media screen and ( max-width: 1024px)
-  .home
-    &__artistes-button
-      font-size: s(16,16)
-      max-width 40%
 
 @media screen and ( max-width: 950px)
   .home
     &__single-name
       font-size: s(18,16)
     &__artist-taxonomy
-      font-size: s(14,16)
-
-@media screen and ( max-width: 850px)
-  .home
-    &__artistes-button
       font-size: s(14,16)
 
 @media screen and ( max-width: 800px)
@@ -151,23 +101,6 @@
       align-items: center
     &__single-artiste + &__single-artiste
       margin s(50,16) 0 0
-    &__artistes-button
-      max-width 50%
-
-@media screen and ( max-width: 600px)
-  .home
-    &__artistes-button
-      max-width 60%
-
-@media screen and ( max-width: 500px)
-  .home
-    &__artistes-button
-      max-width 70%
-
-@media screen and ( max-width: 375px)
-  .home
-    &__artistes-button
-      max-width 100%
 
     
 

@@ -1,0 +1,84 @@
+.footer
+  &__bloc
+    background-color: $mediumRed
+    padding: s(50) 0
+  &__infos
+    color: $white
+    font-weight 400
+    font-size: s(18,16)
+    position relative
+    padding-left: s(50,18)
+    margin-bottom: s(30,18)
+    display block
+    line-height: 1.3
+    &--mail
+      &:before
+        icon('iconMail')
+        color: $darkYellow
+        font-size: s(20,18)
+        position absolute
+        left 0
+    &--tel
+      &:before
+        icon('iconTel')
+        color: $darkYellow
+        font-size: s(20,18)
+        position absolute
+        left 0
+    &--location
+      &:before
+        icon('iconAddress')
+        color: $darkYellow
+        font-size: s(20,18)
+        position absolute
+        left 0
+  &__bloc-infos
+    & h2
+      font-family: 'firasans'
+      color: $white
+      font-size s(25,16)
+      font-weight 600
+      margin-bottom: s(50,25)
+      text-align: center
+  &__container
+    display flex
+    flex-direction: row
+    justify-content: space-between
+  &__partenaires
+    background-color: $darkRed
+  &__partenaires-title
+    color: $darkYellow
+    text-align: center
+    font-size: s(25,16)
+    padding: s(50,25) 0
+    font-weight 600
+
+  &__social-item
+    transition: .3s ease-in-out
+    &:hover
+      transition: .3s ease-in-out
+      opacity 0.5
+    & span 
+      hidden()
+    &--facebook
+      &:before
+        icon('iconFacebook')
+        color: $darkYellow
+        font-size: s(35,16)
+    &--pinterest
+      &:before
+        icon('iconPinterest')
+        color: $darkYellow
+        font-size: s(35,16)
+    &--twitter
+      &:before
+        icon('iconTwitter')
+        color: $darkYellow
+        font-size: s(35,16)
+  &__social-item + &__social-item
+    margin-left: s(20,16)
+  &__register-input
+    padding: s(10,16)
+    width: 100%
+    border-radius: 5px
+    margin-bottom s(20,16)
