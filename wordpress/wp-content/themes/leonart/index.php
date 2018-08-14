@@ -52,20 +52,6 @@ Template Name: Page d’accueil
       <?php if($posts->have_posts()) : while($posts->have_posts()): $posts->the_post();?>
      <?php $programmmesHome = get_fields($post->ID); ?>
       <div class="home__programmes-single">
-        <div class="home__programmes-left">
-          <?php $homeProgrammes = $programmmesHome['event__photo']; ?>
-          <figure class="home__programmes-figure">
-            <?php if( !empty($homeProgrammes) ): ?>
-              <?php $size = 'thumb-home-programmes';
-                    $thumb = $homeProgrammes['sizes'][ $size ]; ?>
-            <img class="home__programmes-img" src="<?= $thumb; ?>" width="421" height="312" alt="<?= $homeProgrammes['alt']; ?>">
-            <?php endif; ?>
-          </figure>
-          <?php $programmesID = $post->ID; ?>
-          <?php if(wp_get_taxonomies($programmesID, 'places')): ?>
-            <span class="home__programmes-taxonomy"><?= wp_get_taxonomies($programmesID, 'places'); ?></span>
-          <?php endif; ?>
-        </div>
         <section class="home__programmes-infos">
           <h3 class="home__programmes-title" aria-level="3" role="heading"></h3><?= the_title(); ?></h3>
           <div class="home__programmes-time">

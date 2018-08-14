@@ -1,0 +1,38 @@
+.agenda
+  &__title-date
+    background-color: $mediumRed
+    font-family: 'firasans'
+    text-align: center
+    font-size: s(25,16)
+    padding: s(40,25) 0
+    font-weight: 600
+    color: $white
+  &__bloc-infos
+    background-color: $white
+    display: flex
+    flex-direction: row
+    justify-content: center
+    padding: s(30,16) s(50,16)
+    &:nth-child(odd)
+      background-color: $lightGreyTwo
+  &__time
+    width: 50%
+    font-size: s(20,16)
+    font-weight 600
+    color: $darkGrey
+  &__location
+    width: 50%
+  &__location-title
+    color: $mediumRed
+    font-size: s(20,16)
+    font-weight 600
+    text-transform: uppercase
+    margin-bottom: s(10,20)
+    font-family 'firasans'
+  &__location-sign
+    color: $mediumRed
+    font-size: s(16,16)
+    font-weight 400
+    font-style: italic
+    &:hover
+      text-decoration underline
