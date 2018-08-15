@@ -47,7 +47,7 @@ Template Name: Page d’accueil
   <!-- Liste des programmes -->
   <div class="home__programmes">
     <section class="home__programmes-bloc wrap">
-      <h2 class="title title-white" aria-level="2" role="heading"><?= __('Notre agenda','wp'); ?></h2>
+      <h2 class="title title-white left" aria-level="2" role="heading"><?= __('Notre agenda','wp'); ?></h2>
       <?php $posts = new WP_Query( ['posts_per_page' => -1, 'post_type' => 'activites'] ); ?>
     <?php if($posts->have_posts()) : while($posts->have_posts()): $posts->the_post();?>
     <section class="agenda__bloc">

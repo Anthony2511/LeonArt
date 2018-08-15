@@ -6,6 +6,8 @@
   text-align: center
   margin : s(50,50) 0
 .title-red
+  position: relative
+  z-index: 20
   &:before
   &:after
     content: ''
@@ -20,7 +22,7 @@
     margin-top: s(15,50)
 .title-white
   color: $white
-  text-align: left
+  text-align: center
   position: relative
   z-index: 20
   &:before
@@ -29,6 +31,7 @@
     display: block
     width: s(150,50)
     height: s(3,50)
+    margin: 0 auto
     background-color: $white
   &:before
     margin-bottom: s(15,50)

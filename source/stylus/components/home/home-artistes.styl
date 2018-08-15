@@ -12,6 +12,7 @@
     justify-content: center
     margin-bottom: s(50,16)
     flex-wrap: wrap
+    padding 0 s(20,16)
   &__artiste-img
     position: relative
   &__single-img
@@ -82,8 +83,13 @@
   transition: 0.3s ease-in-out
 
 .artistes-margin
-  width: 21.5%
+  width: 22.5%
   margin: 0 s(20,16) s(20,16) 0
+
+
+@media screen and ( max-width: 1024px)
+  .artistes-margin
+    width: 25%
 
 @media screen and ( max-width: 950px)
   .home
@@ -92,16 +98,29 @@
     &__artist-taxonomy
       font-size: s(14,16)
 
+@media screen and ( max-width: 850px)
+  .artistes-margin
+    width: 34%
+
 @media screen and ( max-width: 800px)
   .home
     &__artistes-bloc
-    &__artistes-bloc-page
       display: flex
       flex-direction: column
       justify-content: center
       align-items: center
-    &__single-artiste + &__single-artiste
-      margin s(50,16) 0 0
+    &__single-artiste
+      margin s(50,16)s(20,16) 0 0
+
+@media screen and ( max-width: 600px)
+  .artistes-margin
+    width: 45%
+
+@media screen and ( max-width: 450px)
+  .artistes-margin
+    width: 65%
+
+
 
     
 

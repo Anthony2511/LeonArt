@@ -10,11 +10,11 @@ Template Name: Page About
   <h1 class="hidden" aria-level="1" role="heading"><?php the_title(); ?></h1>
   <?php get_header(); ?>
   <?php include('navigation.php'); ?>
-  <section class="padding-page wrap">
+  <section>
     <h2 class="title title-red" aria-level="2" role="heading"><?= __('&Aacute; Propos de nous','wp'); ?></h2>
 
     <!-- BLOC PRESENTATION -->
-    <div class="about__presentation">
+    <div class="about__presentation wrap padding-page">
       <figure class="about__bloc-img">
         <?php $about = get_field('about__img'); ?>
         <img src="<?= $about['url']; ?>" alt="" class="about__img">
@@ -28,14 +28,14 @@ Template Name: Page About
         </ul>
       </section>
     </div>
-    <section class="about__bloc-text">
+    <section class="about__bloc-text wrap padding-page">
       <h3 class="title title-red left" aria-level="3" role="heading"><?= __('Description','wp'); ?></h3>
       <p class="about__text-presentation"><?= the_field('about__text');?>
       </p>
     </section>
 
     <!-- ORGANISTEURS LIST -->
-    <section>
+    <section class="wrap padding-page">
       <h3 class="title title-red" aria-level="3" role="heading"><?= __('Nos organisateurs','wp'); ?></h3>
       <div class="home__artistes-bloc-page">
         <?php if( have_rows('organisateurs') ): ?>
@@ -52,6 +52,29 @@ Template Name: Page About
           </div>
         <?php endwhile; endif; ?>
       </div>
+    </section>
+
+    <!-- LAST EDITONS -->
+    <section class="about__last">
+      <section class="wrap padding-page">
+        <h3 class="title title-white" aria-level="3" role="heading"><?= __('Nos éditions précédentes','wp'); ?></h3>
+        <div class="about__editions-index">
+          <p class="about__editions-text"><?= the_field('about__last-text'); ?></p>
+      
+            <?php $images = get_field('about__last-img');
+                  $size = 'full'; // (thumbnail, medium, large, full or custom size)
+                  
+                  if( $images ): ?>
+                    <div class="about__gallery">
+                        <?php foreach( $images as $image ): ?>
+                            <figure>
+                              <?php echo wp_get_attachment_image( $image['ID'], $size ); ?>
+                            </figure>
+                        <?php endforeach; ?>
+                    </div>
+                  <?php endif; ?>
+          </div>
+      </section>
     </section>
   </section>
   <?php include('footer.php'); ?>
