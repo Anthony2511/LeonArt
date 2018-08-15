@@ -64,17 +64,37 @@ Template Name: Page About
             <?php $images = get_field('about__last-img');
                   $size = 'full'; // (thumbnail, medium, large, full or custom size)
                   
-                  if( $images ): ?>
-                    <div class="about__gallery">
-                        <?php foreach( $images as $image ): ?>
-                            <figure>
-                              <?php echo wp_get_attachment_image( $image['ID'], $size ); ?>
-                            </figure>
-                        <?php endforeach; ?>
-                    </div>
-                  <?php endif; ?>
+            if( $images ): ?>
+              <div class="about__gallery">
+                  <?php foreach( $images as $image ): ?>
+                      <figure>
+                        <?php echo wp_get_attachment_image( $image['ID'], $size ); ?>
+                      </figure>
+                  <?php endforeach; ?>
+              </div>
+            <?php endif; ?>
           </div>
       </section>
+    </section>
+
+    <!-- EDITIONS EN CHIFFRES -->
+    <section class="padding-page wrap">
+      <h3 class="title title-red" aria-level="3" role="heading"><?= __('Notre édition 2017 en chiffres','wp'); ?></h3>
+      <div class="about__bloc-numbers">
+        <div class="about__numbers">
+          <span class="about__numbers-list">75</span>
+          <span class="about__numbers-name">artistes</span>
+        </div>
+        <div class="about__numbers">
+          <span class="about__numbers-list">268</span>
+          <span class="about__numbers-name">oeuvres</span>
+        </div>
+        <div class="about__numbers">
+          <span class="about__numbers-list">59</span>
+          <span class="about__numbers-name">expositions</span>
+        </div>
+      </div>
+      <a href="<?php the_permalink(49); ?>" class="button" title="Vers la page de tous les artistes"><span class="span"><?= __('Voir l\'agenda complet', 'wp'); ?></span></a>
     </section>
   </section>
   <?php include('footer.php'); ?>

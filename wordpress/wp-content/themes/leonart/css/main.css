@@ -1236,6 +1236,56 @@ body
 
     color: #fff;
 }
+.about__numbers
+{
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display:         flex;
+            flex-direction: column;
+
+    width: 25%;
+    padding: 3.125em;
+
+    color: #fff;
+    border-radius: 20px;
+    background: linear-gradient(to top right, #851c47, #ffc652);
+
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+            align-items: center;
+}
+.about__bloc-numbers
+{
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display:         flex;
+            flex-direction: row;
+
+    margin-bottom: 3.125em;
+
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+    -webkit-justify-content: space-around;
+    -ms-flex-pack: distribute;
+            justify-content: space-around;
+}
+.about__numbers-list
+{
+    font-size: 3.125em;
+    font-weight: 600;
+}
+.about__numbers-name
+{
+    font-size: 1.5625em;
+    font-weight: 600;
+
+    text-transform: uppercase;
+}
 .menu-page
 {
     position: relative;
