@@ -34,12 +34,13 @@ Template Name: Page Agenda
            <?php $location = get_sub_field('event__location');?>
             <div class="agenda__location">
               <h3 class="agenda__location-title"><?= the_sub_field('event__title'); ?></h3>
-              <a href="<?= $location->guid;?>" class="agenda__location-sign" title="Vers la page du lieu : <?= $location->post_title;?>"><?= $location->post_title;?></a>
+              <?php if(get_sub_field('event__location') !==null): ?>
+                <a href="<?= $location->guid;?>" class="agenda__location-sign" title="Vers la page du lieu : <?= $location->post_title;?>"><?= $location->post_title;?></a>
+               <?php else: ?>
+            <?php endif; ?>
             </div>
       </div>
-
       <?php endwhile; endif; ?>
-
     </section>
     <?php wp_reset_postdata(); ?> 
     <?php endwhile; endif; ?>

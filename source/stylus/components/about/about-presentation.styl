@@ -1,0 +1,55 @@
+.about
+  &__presentation
+    display: flex
+    flex-direction: row
+    justify-content: center
+    align-items: center
+    margin-bottom: s(100,16)
+  &__bloc-presentation
+    background-color: $mediumRed
+    color: $white
+    height 100%
+    padding: s(50,16)
+    position relative
+    left -50px
+  &__title-presentation
+    font-family: 'firasans'
+    font-size s(40,16)
+    font-weight 600
+    text-align: center
+    margin-bottom: s(20,40)
+  &__item-presentation
+    font-size: s(21,16)
+    font-weight 400
+    position relative
+    padding-left: s(60,21)
+    &--create
+      &:before
+        icon('iconCreation')
+        color: $darkYellow
+        font-size: s(20,21)
+        position absolute
+        left 0
+    &--location
+      &:before
+        icon('iconLocationSign')
+        color: $darkYellow
+        font-size: s(30,21)
+        position absolute
+        left 0
+    &--expo
+      &:before
+        icon('iconWho')
+        color: $darkYellow
+        font-size: s(30,21)
+        position absolute
+        left 0
+  &__item-presentation + &__item-presentation
+    margin-top: s(30,21)
+  &__text-presentation
+    column-count: 2
+    column-gap: 50px
+    font-size: s(16)
+    font-weight 400
+    color: $darkGrey
+    line-height: 1.5

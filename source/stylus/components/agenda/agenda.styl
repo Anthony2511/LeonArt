@@ -13,6 +13,7 @@
     flex-direction: row
     justify-content: center
     padding: s(30,16) s(50,16)
+    border: 1px solid $darkGrey
     &:nth-child(odd)
       background-color: $lightGreyTwo
   &__time
@@ -34,5 +35,6 @@
     font-size: s(16,16)
     font-weight 400
     font-style: italic
-    &:hover
-      text-decoration underline
+    display: block
+    &:before
+      icon('iconLocationSign')

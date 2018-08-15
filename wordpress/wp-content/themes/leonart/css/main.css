@@ -187,8 +187,8 @@ body
     font-weight: normal;
     font-style: normal;
 
-    src: url('../fonts/icomoon/icomoon.eot?h31cyw');
-    src: url('../fonts/icomoon/icomoon.eot?h31cyw#iefix') format('embedded-opentype'), url('../fonts/icomoon/icomoon.ttf?h31cyw') format('truetype'), url('../fonts/icomoon/icomoon.woff?h31cyw') format('woff'), url('../fonts/icomoon/icomoon.svg?h31cyw#icomoon') format('svg');
+    src: url('../fonts/icomoon/icomoon.eot?66xix8');
+    src: url('../fonts/icomoon/icomoon.eot?66xix8#iefix') format('embedded-opentype'), url('../fonts/icomoon/icomoon.ttf?66xix8') format('truetype'), url('../fonts/icomoon/icomoon.woff?66xix8') format('woff'), url('../fonts/icomoon/icomoon.svg?66xix8#icomoon') format('svg');
 }
 @font-face
 {
@@ -686,58 +686,10 @@ body
 
     background-color: rgba(133,28,71,.9);
 }
-.home__programmes-single
-{
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display:         flex;
-            flex-direction: row;
-
-    margin-bottom: 4.0625em;
-
-    -webkit-flex-direction: row;
-        -ms-flex-direction: row;
-    -webkit-justify-content: flex-start;
-    -ms-flex-pack: start;
-            justify-content: flex-start;
-}
 .home__programmes-bloc
 {
     position: relative;
     z-index: 20;
-}
-.home__programmes-left
-{
-    position: relative;
-
-    margin-right: 6.25em;
-}
-.home__programmes-taxonomy
-{
-    font-size: 1em;
-    font-weight: 400;
-
-    position: absolute;
-    top: -.9375em;
-    left: -1.875em;
-
-    padding: .625em 2.5em;
-
-    color: #851c47;
-    background-color: #ffc652;
-}
-.home__programmes-infos
-{
-    color: #fff;
-}
-.home__programmes-title
-{
-    font-family: 'firasans';
-    font-size: 3.125em;
-}
-.home__programmes-lieu
-{
-    display: block;
 }
 .contact
 {
@@ -1003,6 +955,7 @@ body
 
     padding: 1.875em 3.125em;
 
+    border: 1px solid #434343;
     background-color: #fff;
 
     -webkit-flex-direction: row;
@@ -1046,11 +999,152 @@ body
     font-weight: 400;
     font-style: italic;
 
+    display: block;
+
     color: #851c47;
 }
-.agenda__location-sign:hover
+.agenda__location-sign:before
 {
-    text-decoration: underline;
+    font-family: 'icomoon';
+    font-weight: normal;
+    font-style: normal;
+    font-variant: normal;
+    line-height: 1;
+
+    content: '\e901';
+    text-transform: none;
+
+    speak: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.about__presentation
+{
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display:         flex;
+            flex-direction: row;
+
+    margin-bottom: 6.25em;
+
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+            align-items: center;
+}
+.about__bloc-presentation
+{
+    position: relative;
+    left: -50px;
+
+    height: 100%;
+    padding: 3.125em;
+
+    color: #fff;
+    background-color: #851c47;
+}
+.about__title-presentation
+{
+    font-family: 'firasans';
+    font-size: 2.5em;
+    font-weight: 600;
+
+    margin-bottom: .5em;
+
+    text-align: center;
+}
+.about__item-presentation
+{
+    font-size: 1.3125em;
+    font-weight: 400;
+
+    position: relative;
+
+    padding-left: 2.857142857142857em;
+}
+.about__item-presentation--create:before
+{
+    font-family: 'icomoon';
+    font-size: .952380952380952em;
+    font-weight: normal;
+    font-style: normal;
+    font-variant: normal;
+    line-height: 1;
+
+    position: absolute;
+    left: 0;
+
+    content: '\e90b';
+    text-transform: none;
+
+    color: #ffc652;
+
+    speak: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.about__item-presentation--location:before
+{
+    font-family: 'icomoon';
+    font-size: 1.428571428571429em;
+    font-weight: normal;
+    font-style: normal;
+    font-variant: normal;
+    line-height: 1;
+
+    position: absolute;
+    left: 0;
+
+    content: '\e901';
+    text-transform: none;
+
+    color: #ffc652;
+
+    speak: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.about__item-presentation--expo:before
+{
+    font-family: 'icomoon';
+    font-size: 1.428571428571429em;
+    font-weight: normal;
+    font-style: normal;
+    font-variant: normal;
+    line-height: 1;
+
+    position: absolute;
+    left: 0;
+
+    content: '\e90d';
+    text-transform: none;
+
+    color: #ffc652;
+
+    speak: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.about__item-presentation + .about__item-presentation
+{
+    margin-top: 1.428571428571429em;
+}
+.about__text-presentation
+{
+    font-size: 1em;
+    font-weight: 400;
+    line-height: 1.5;
+
+    color: #434343;
+
+    -webkit-column-count: 2;
+            column-count: 2;
+    -webkit-column-gap: 50px;
+            column-gap: 50px;
 }
 .menu-page
 {
@@ -1431,6 +1525,23 @@ body
     margin-bottom: .3em;
 }
 .title-white:after
+{
+    margin-top: .3em;
+}
+.left
+{
+    text-align: left;
+}
+.left:before,
+.left:after
+{
+    margin: 0;
+}
+.left:before
+{
+    margin-bottom: .3em;
+}
+.left:after
 {
     margin-top: .3em;
 }

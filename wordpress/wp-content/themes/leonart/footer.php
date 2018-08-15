@@ -44,24 +44,7 @@
       <h2 class="footer__partenaires-title"><?= __('En collaboration avec','wp'); ?></h2>
 
       <div class="contact__partenaires-bloc">
-            <?php $posts = new WP_Query( ['page_id' => 105] ); ?>
-      <?php if ( have_posts() ): while ( have_posts() ): the_post(); ?>
-        <div>
-        <?php if( have_rows('logo') ): ?>
-        <?php while( have_rows('logo') ): the_row(); ?>
-
-            <?php $logoPartners = get_sub_field('logo-partners'); ?>
-              <figure>
-                <?php if( !empty($logoPartners) ): ?>
-                  <?php $size = 'thumb-partners';
-                        $thumb = $logoPartners['sizes'][ $size ]; ?>
-                <img src="<?= $thumb; ?>" alt="<?= $logoPartners['alt']; ?>">
-                <?php endif; ?>
-              </figure>
-        <?php endwhile; endif; ?>
-      </div>
-            <?php wp_reset_postdata(); ?> 
-       <?php endwhile; endif; ?>
+    
       </div>
 
     </div>

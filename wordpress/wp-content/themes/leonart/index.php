@@ -48,26 +48,34 @@ Template Name: Page d’accueil
   <div class="home__programmes">
     <section class="home__programmes-bloc wrap">
       <h2 class="title title-white" aria-level="2" role="heading"><?= __('Notre agenda','wp'); ?></h2>
-      <?php $posts = new WP_Query( ['posts_per_page' => 2, 'post_type' => 'activites'] ); ?>
-      <?php if($posts->have_posts()) : while($posts->have_posts()): $posts->the_post();?>
-     <?php $programmmesHome = get_fields($post->ID); ?>
-      <div class="home__programmes-single">
-        <section class="home__programmes-infos">
-          <h3 class="home__programmes-title" aria-level="3" role="heading"></h3><?= the_title(); ?></h3>
-          <div class="home__programmes-time">
-            <time class="home__programmes-date" datetime="2018-09-30">
-            <?= $programmmesHome['event__time']; ?>, <?= $programmmesHome['event__hour-start']; ?>
-            <?php if ($programmmesHome['event__hour-end'] != null): ?>
-            - <?= $programmmesHome['event__hour-end']; ?>
+      <?php $posts = new WP_Query( ['posts_per_page' => -1, 'post_type' => 'activites'] ); ?>
+    <?php if($posts->have_posts()) : while($posts->have_posts()): $posts->the_post();?>
+    <section class="agenda__bloc">
+      <h3 class="agenda__title-date" role="heading" aria-level="3"><?php the_title(); ?></h3>
+      <?php if( have_rows('event') ): ?>
+      <?php while( have_rows('event') ): the_row(); ?>
+      <div class="agenda__bloc-infos">
+
+          <!-- Heure de l'event -->
+          <div class="agenda__time">
+            <?= the_sub_field('event__hour-start'); ?>
+            <?php if (the_sub_field('event__hour-end') != null): ?>
+             - <?= the_sub_field('event__hour-end'); ?>
             <?php else: ?>
             <?php endif; ?>
-            </time>
-            <a href="#" class="home__programmes-lieu">Le magasin</a>
           </div>
-        </section>
+          
+          <!-- Infos de l'event -->
+           <?php $location = get_sub_field('event__location');?>
+            <div class="agenda__location">
+              <h3 class="agenda__location-title"><?= the_sub_field('event__title'); ?></h3>
+              <a href="<?= $location->guid;?>" class="agenda__location-sign" title="Vers la page du lieu : <?= $location->post_title;?>"><?= $location->post_title;?></a>
+            </div>
       </div>
-      <?php wp_reset_postdata(); ?> 
       <?php endwhile; endif; ?>
+    </section>
+    <?php wp_reset_postdata(); ?> 
+    <?php endwhile; endif; ?>
     </section>
   </div>
 
