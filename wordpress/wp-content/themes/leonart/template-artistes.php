@@ -34,7 +34,7 @@ Template Name: Page Artistes
     <div class="home__artistes-bloc-page">
       <?php $posts = new WP_Query( ['posts_per_page' => -1, 'post_type' => 'artistes', 'orderby' => 'rand'] ); ?>
       <?php if($posts->have_posts()) : while($posts->have_posts()): $posts->the_post();?>
-      <div class="home__single-artiste artistes-margin   ">
+      <div class="home__single-artiste artistes-margin">
       <?php $homeArtist = get_field('artiste__photo'); ?>
         <figure class="home__artiste-img">
           <?php if( !empty($homeArtist) ): ?>

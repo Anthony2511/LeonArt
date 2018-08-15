@@ -28,10 +28,30 @@ Template Name: Page About
         </ul>
       </section>
     </div>
-    <section>
-      <h2 class="title title-red left" aria-level="2" role="heading"><?= __('Description','wp'); ?></h2>
+    <section class="about__bloc-text">
+      <h3 class="title title-red left" aria-level="3" role="heading"><?= __('Description','wp'); ?></h3>
       <p class="about__text-presentation"><?= the_field('about__text');?>
       </p>
+    </section>
+
+    <!-- ORGANISTEURS LIST -->
+    <section>
+      <h3 class="title title-red" aria-level="3" role="heading"><?= __('Nos organisateurs','wp'); ?></h3>
+      <div class="home__artistes-bloc-page">
+        <?php if( have_rows('organisateurs') ): ?>
+        <?php while( have_rows('organisateurs') ): the_row(); ?>
+          <div class="home__single-artiste artistes-margin">
+              <figure class="home__artiste-img">
+                <?php $orga = get_sub_field('organisateur__img'); ?>
+                <img class="home__single-img" src="<?= $orga['url']; ?>" alt="<?= $orga['alt']; ?>">
+              </figure>
+              <section class="home__artistes-titleBloc">
+                <h3 class="home__single-name" aria-level="3" role="heading"><?= the_sub_field('organisateur__name'); ?></h3>
+                  <span class="home__artist-taxonomy"><?= the_sub_field('organisateur__fonction'); ?></span>
+              </section>
+          </div>
+        <?php endwhile; endif; ?>
+      </div>
     </section>
   </section>
   <?php include('footer.php'); ?>
