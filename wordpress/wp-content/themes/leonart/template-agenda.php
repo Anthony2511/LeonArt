@@ -10,7 +10,7 @@ Template Name: Page Agenda
   <h1 class="hidden" aria-level="1" role="heading"><?php the_title(); ?></h1>
   <?php get_header(); ?>
   <?php include('navigation.php'); ?>
-  <section class="padding-page wrap">
+  <section class="agenda__page wrap">
     <h2 class="title title-red" aria-level="2" role="heading"><?= __('Notre agenda','wp'); ?></h2>
 
     <?php $posts = new WP_Query( ['posts_per_page' => -1, 'post_type' => 'activites'] ); ?>
