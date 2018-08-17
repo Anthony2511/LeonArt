@@ -31,12 +31,28 @@
     text-transform: uppercase
     margin-bottom: s(10,20)
     font-family 'firasans'
+    position relative
+    padding-left: s(20,20)
   &__location-sign
     color: $mediumRed
     font-size: s(16,16)
     font-weight 400
     font-style: italic
     display: block
+    position relative
+    padding-left: s(20,16)
     &:before
       icon('iconLocationSign')
-      margin-right: s(10,16)
+      position absolute
+      left 0
+
+@media screen and (max-width 375px)
+  .agenda
+    &__bloc-infos
+      flex-direction: column
+      justify-content: center
+      align-items: center
+      padding: 0
+      text-align center
+    &__location-sign
+      padding-left: s(10,16)

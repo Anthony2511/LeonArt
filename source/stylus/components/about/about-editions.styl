@@ -70,3 +70,16 @@
       margin-top: s(30)
     &__editions-text
       width: 100%
+    &__bloc-numbers
+      flex-direction column
+      justify-content: center
+      align-items: center
+    &__numbers
+      width: 50%
+    &__numbers + &__numbers
+      margin-top: s(30)
+
+@media screen and (max-width 375px)
+  .about
+    &__numbers
+      width: 75%

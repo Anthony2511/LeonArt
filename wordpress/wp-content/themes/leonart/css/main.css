@@ -762,6 +762,27 @@ body
 {
     width: 33.3333333333%;
 }
+@media screen and (max-width: 1024px)
+{
+    .home__programmes-container
+    {
+                flex-direction: column;
+
+        -webkit-flex-direction: column;
+            -ms-flex-direction: column;
+    }
+    .home__programmes-blocs
+    {
+        width: 100%;
+    }
+}
+@media screen and (max-width: 375px)
+{
+    .home__programmes-time
+    {
+        margin-bottom: .625em;
+    }
+}
 .contact
 {
     display: -webkit-flex;
@@ -1059,7 +1080,10 @@ body
     font-size: 1.25em;
     font-weight: 600;
 
+    position: relative;
+
     margin-bottom: .5em;
+    padding-left: 1em;
 
     text-transform: uppercase;
 
@@ -1071,7 +1095,11 @@ body
     font-weight: 400;
     font-style: italic;
 
+    position: relative;
+
     display: block;
+
+    padding-left: 1.25em;
 
     color: #851c47;
 }
@@ -1083,7 +1111,8 @@ body
     font-variant: normal;
     line-height: 1;
 
-    margin-right: .625em;
+    position: absolute;
+    left: 0;
 
     content: '\e901';
     text-transform: none;
@@ -1091,6 +1120,31 @@ body
     speak: none;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+}
+@media screen and (max-width: 375px)
+{
+    .agenda__bloc-infos
+    {
+                flex-direction: column;
+
+        padding: 0;
+
+        text-align: center;
+
+        -webkit-flex-direction: column;
+            -ms-flex-direction: column;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        -ms-grid-row-align: center;
+                align-items: center;
+    }
+    .agenda__location-sign
+    {
+        padding-left: .625em;
+    }
 }
 .about__presentation
 {
@@ -1408,6 +1462,35 @@ body
     .about__editions-text
     {
         width: 100%;
+    }
+    .about__bloc-numbers
+    {
+                flex-direction: column;
+
+        -webkit-flex-direction: column;
+            -ms-flex-direction: column;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        -ms-grid-row-align: center;
+                align-items: center;
+    }
+    .about__numbers
+    {
+        width: 50%;
+    }
+    .about__numbers + .about__numbers
+    {
+        margin-top: 1.875em;
+    }
+}
+@media screen and (max-width: 375px)
+{
+    .about__numbers
+    {
+        width: 75%;
     }
 }
 .menu-page
