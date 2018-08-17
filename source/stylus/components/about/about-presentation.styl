@@ -55,3 +55,28 @@
     line-height: 1.5
   &__bloc-text
     margin-bottom: s(100,16)
+
+@media screen and (max-width 1024px)
+  .about
+    &__presentation
+      flex-direction: column
+    &__bloc-presentation
+      position static
+      width: 100%
+      margin-top: s(50)
+    &__item-presentation
+      position static
+      padding-left: 0
+      text-align: center
+      &:before
+        position static
+        margin-right: s(20,21)
+@media screen and (max-width 768px)
+  .about
+    &__text-presentation
+      column-count: 1
+
+@media screen and (max-width 577px)
+  .about
+    &__item-presentation
+      font-size s(18,16)

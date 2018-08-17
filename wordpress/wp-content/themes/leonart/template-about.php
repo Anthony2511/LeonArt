@@ -62,12 +62,12 @@ Template Name: Page About
           <p class="about__editions-text"><?= the_field('about__last-text'); ?></p>
       
             <?php $images = get_field('about__last-img');
-                  $size = 'full'; // (thumbnail, medium, large, full or custom size)
+                  $size = 'full';
                   
             if( $images ): ?>
               <div class="about__gallery">
                   <?php foreach( $images as $image ): ?>
-                      <figure>
+                      <figure class="about__figure-gallery">
                         <?php echo wp_get_attachment_image( $image['ID'], $size ); ?>
                       </figure>
                   <?php endforeach; ?>

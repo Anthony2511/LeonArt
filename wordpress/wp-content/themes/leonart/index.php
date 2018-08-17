@@ -52,27 +52,26 @@ Template Name: Page d’accueil
     <?php if($posts->have_posts()) : while($posts->have_posts()): $posts->the_post();?>
     <section class="agenda__bloc">
       <h3 class="agenda__title-date" role="heading" aria-level="3"><?php the_title(); ?></h3>
-      <?php if( have_rows('event') ): ?>
-      <?php while( have_rows('event') ): the_row(); ?>
+      <?php $homeProgrammes = get_field('event');
+      $homeProgrammes[1];
+      ?>
       <div class="agenda__bloc-infos">
-
           <!-- Heure de l'event -->
           <div class="agenda__time">
-            <?= the_sub_field('event__hour-start'); ?>
-            <?php if (the_sub_field('event__hour-end') != null): ?>
-             - <?= the_sub_field('event__hour-end'); ?>
+            <?= $homeProgrammes[1]['event__hour-start']; ?>
+            <?php if ($homeProgrammes[1]['event__hour-end'] != null): ?>
+               - <?= $homeProgrammes[1]['event__hour-end']; ?>
             <?php else: ?>
             <?php endif; ?>
           </div>
           
           <!-- Infos de l'event -->
-           <?php $location = get_sub_field('event__location');?>
+           <?php $location = $homeProgrammes[1]['event__location'];?>
             <div class="agenda__location">
-              <h3 class="agenda__location-title"><?= the_sub_field('event__title'); ?></h3>
+              <h3 class="agenda__location-title"><?= $homeProgrammes[1]['event__title']; ?></h3>
               <a href="<?= $location->guid;?>" class="agenda__location-sign" title="Vers la page du lieu : <?= $location->post_title;?>"><?= $location->post_title;?></a>
             </div>
       </div>
-      <?php endwhile; endif; ?>
     </section>
     <?php wp_reset_postdata(); ?> 
     <?php endwhile; endif; ?>

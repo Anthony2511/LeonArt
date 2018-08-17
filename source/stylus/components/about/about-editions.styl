@@ -53,3 +53,20 @@
     text-transform uppercase
     font-size: s(25,16)
     font-weight 600
+
+@media screen and (max-width 1024px)
+  .about
+    &__figure-gallery
+      padding 0 s(20)
+
+@media screen and (max-width 768px)
+  .about
+    &__gallery
+      flex-direction column
+      justify-content: center
+      align-items: center
+    &__figure-gallery + &__figure-gallery
+      padding: 0
+      margin-top: s(30)
+    &__editions-text
+      width: 100%

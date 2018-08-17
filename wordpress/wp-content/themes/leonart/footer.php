@@ -1,6 +1,6 @@
 <footer class="footer">
   <div class="footer__bloc">
-    <div class=" footer__container wrap">
+    <div class=" footer__container wrap padding-page">
 
       <!-- SOCIAUX -->
       <section class="footer__bloc-infos">

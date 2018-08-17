@@ -1179,6 +1179,52 @@ body
 {
     margin-bottom: 6.25em;
 }
+@media screen and (max-width: 1024px)
+{
+    .about__presentation
+    {
+                flex-direction: column;
+
+        -webkit-flex-direction: column;
+            -ms-flex-direction: column;
+    }
+    .about__bloc-presentation
+    {
+        position: static;
+
+        width: 100%;
+        margin-top: 3.125em;
+    }
+    .about__item-presentation
+    {
+        position: static;
+
+        padding-left: 0;
+
+        text-align: center;
+    }
+    .about__item-presentation:before
+    {
+        position: static;
+
+        margin-right: .952380952380952em;
+    }
+}
+@media screen and (max-width: 768px)
+{
+    .about__text-presentation
+    {
+        -webkit-column-count: 1;
+                column-count: 1;
+    }
+}
+@media screen and (max-width: 577px)
+{
+    .about__item-presentation
+    {
+        font-size: 1.125em;
+    }
+}
 .about__last
 {
     position: relative;
@@ -1285,6 +1331,39 @@ body
     font-weight: 600;
 
     text-transform: uppercase;
+}
+@media screen and (max-width: 1024px)
+{
+    .about__figure-gallery
+    {
+        padding: 0 1.25em;
+    }
+}
+@media screen and (max-width: 768px)
+{
+    .about__gallery
+    {
+                flex-direction: column;
+
+        -webkit-flex-direction: column;
+            -ms-flex-direction: column;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        -ms-grid-row-align: center;
+                align-items: center;
+    }
+    .about__figure-gallery + .about__figure-gallery
+    {
+        margin-top: 1.875em;
+        padding: 0;
+    }
+    .about__editions-text
+    {
+        width: 100%;
+    }
 }
 .menu-page
 {
@@ -2027,6 +2106,20 @@ body
     padding: .625em;
 
     border-radius: 5px;
+}
+@media screen and (max-width: 1024px)
+{
+    .footer__container
+    {
+                flex-direction: column;
+
+        -webkit-flex-direction: column;
+            -ms-flex-direction: column;
+    }
+    .footer__bloc-infos
+    {
+        margin: 3.125em auto;
+    }
 }
 .button
 {
