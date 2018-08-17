@@ -13,11 +13,31 @@
       bottom: 0
       width: 100%
       height: 100%
-      background-color: rgba(133,28,71,0.9)
+      background-color: alpha($darkGrey,0.8)
       z-index: 10
   &__programmes-bloc
     position: relative
     z-index: 20
+    padding-bottom: s(50)
+  &__programmes-container
+    display: flex 
+    flex-direction: row
+    justify-content: center
+    margin-bottom: s(50)
+  &__programmes-time
+    font-size: s(16)
+    font-weight: 600
+    width: 50%
+    color: $darkGrey
+  &__programmes-title
+    font-family: 'firasans'
+    font-size: s(16)
+    font-weight: 600
+    margin-bottom: s(10,16)
+    text-transform: uppercase
+    color: $mediumRed
+  &__programmes-blocs
+    width: 33.3333333333%
 
 
     

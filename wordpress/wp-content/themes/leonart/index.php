@@ -48,16 +48,18 @@ Template Name: Page d’accueil
   <div class="home__programmes">
     <section class="home__programmes-bloc wrap">
       <h2 class="title title-white left" aria-level="2" role="heading"><?= __('Notre agenda','wp'); ?></h2>
+      <div class="home__programmes-container">
       <?php $posts = new WP_Query( ['posts_per_page' => -1, 'post_type' => 'activites'] ); ?>
     <?php if($posts->have_posts()) : while($posts->have_posts()): $posts->the_post();?>
-    <section class="agenda__bloc">
+    <section class="agenda__bloc home__programmes-blocs">
       <h3 class="agenda__title-date" role="heading" aria-level="3"><?php the_title(); ?></h3>
       <?php $homeProgrammes = get_field('event');
       $homeProgrammes[1];
       ?>
       <div class="agenda__bloc-infos">
+
           <!-- Heure de l'event -->
-          <div class="agenda__time">
+          <div class="home__programmes-time">
             <?= $homeProgrammes[1]['event__hour-start']; ?>
             <?php if ($homeProgrammes[1]['event__hour-end'] != null): ?>
                - <?= $homeProgrammes[1]['event__hour-end']; ?>
@@ -68,13 +70,15 @@ Template Name: Page d’accueil
           <!-- Infos de l'event -->
            <?php $location = $homeProgrammes[1]['event__location'];?>
             <div class="agenda__location">
-              <h3 class="agenda__location-title"><?= $homeProgrammes[1]['event__title']; ?></h3>
+              <h3 class="home__programmes-title"><?= $homeProgrammes[1]['event__title']; ?></h3>
               <a href="<?= $location->guid;?>" class="agenda__location-sign" title="Vers la page du lieu : <?= $location->post_title;?>"><?= $location->post_title;?></a>
             </div>
       </div>
     </section>
     <?php wp_reset_postdata(); ?> 
     <?php endwhile; endif; ?>
+    </div>
+      <a href="<?php the_permalink(49); ?>" class="button" title="Vers la page Agenda"><span class="span"><?= __('Voir l\'agenda complet', 'wp'); ?></span></a>
     </section>
   </div>
 
