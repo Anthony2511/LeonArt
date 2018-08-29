@@ -23,9 +23,9 @@ Template Name: Page Single Artistes
             <img class="artiste-page__img" src="<?= $pageArtists['url']; ?>" alt="<?= $pageArtists['alt']; ?>">
           </div>
           <div class="artiste-page__bloc-social">
-            <a href="" class="artiste-page__social artiste-page__social--facebook"><span><?= __('Facebook','wp'); ?></span></a>
-            <a href="" class="artiste-page__social artiste-page__social--pinterest"><span><?= __('Pinterest','wp'); ?></span></a>
-            <a href="" class="artiste-page__social artiste-page__social--twitter"><span><?= __('Twitter','wp'); ?></span></a>
+            <a href="<?= the_field('artiste__facebook'); ?>" target="_blank" class="artiste-page__social artiste-page__social--facebook"><span><?= __('Facebook','wp'); ?></span></a>
+            <a href="<?= the_field('artiste__pinterest'); ?>" target="_blank" class="artiste-page__social artiste-page__social--pinterest"><span><?= __('Pinterest','wp'); ?></span></a>
+            <a href="<?= the_field('artiste__twitter'); ?>" target="_blank" class="artiste-page__social artiste-page__social--twitter"><span><?= __('Twitter','wp'); ?></span></a>
           </div>
       </div>
 
@@ -38,15 +38,15 @@ Template Name: Page Single Artistes
      
 
     <!-- Bloc 2 -->
-    <div class="artiste-page__bloc">
+    <div class="artiste-page__bloc artiste-page__bloc-two">
 
       <!-- Bloc Gauche -->
-      <div class="artiste-page__infos">
+      <div class="artiste-page__infos artiste-page__infos-two">
         <h3 class="title title-red font-size"><?= __('Informations supplémentaires','wp'); ?></h3>
         <div>
           <div>
-            <a href="mailto:stleonart@gmail.com" class="artiste-page__more artiste-page__more--mail">test@mail.com</a>
-            <p class="artiste-page__more artiste-page__more--tel">0478 25 56 86</p>
+            <a href="mailto:stleonart@gmail.com" class="artiste-page__more artiste-page__more--mail"><?= the_field('artiste__email'); ?></a>
+            <p class="artiste-page__more artiste-page__more--tel"><?= the_field('artiste__phone'); ?></p>
           </div>
         </div>
       </div>

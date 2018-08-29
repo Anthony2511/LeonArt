@@ -10,7 +10,7 @@ Template Name: Page Contact
   <h1 class="hidden" aria-level="1" role="heading"><?php the_title(); ?></h1>
   <?php get_header(); ?>
   <?php include('navigation.php'); ?>
-  <section class="wrap">
+  <section class="wrap contact-page">
     <h2 class="title title-red" aria-level="2" role="heading"><?= __('Contactez-nous','wp'); ?></h2>
     <div class="contact">
       <?= do_shortcode('[contact-form-7 id="98" title="Formulaire de contact"]'); ?>

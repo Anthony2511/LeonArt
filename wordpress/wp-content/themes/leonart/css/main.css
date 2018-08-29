@@ -1011,6 +1011,10 @@ body
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
+.contact-page
+{
+    padding-top: 3.125em;
+}
 @media screen and (max-width: 768px)
 {
     .contact__bloc-title
@@ -1214,6 +1218,7 @@ body
     text-align: center;
 
     color: #ffc652;
+    border-radius: 5px;
     background-color: #851c47;
 }
 .artiste-page__bloc-social
@@ -1223,6 +1228,8 @@ body
 .artiste-page__social
 {
     font-size: 2.5em;
+
+    transition: .3s ease-in-out;
 
     color: #851c47;
 }
@@ -1278,6 +1285,12 @@ body
     speak: none;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+}
+.artiste-page__social:hover
+{
+    transition: .3s ease-in-out;
+
+    color: #ffc652;
 }
 .artiste-page__more
 {
@@ -1347,6 +1360,101 @@ body
     .artiste-page
     {
         padding: 0 1.25em;
+    }
+}
+@media screen and (max-width: 1024px)
+{
+    .artiste-page__title
+    {
+        max-width: 75%;
+    }
+    .artiste-page__bloc-two
+    {
+                flex-direction: column;
+
+        -webkit-flex-direction: column;
+            -ms-flex-direction: column;
+    }
+    .artiste-page__infos-two
+    {
+        width: 100%;
+    }
+    .artiste-page__oeuvres
+    {
+        width: 100%;
+        margin-top: 1.875em;
+    }
+    .artiste-page__gallery
+    {
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+                justify-content: center;
+    }
+    .artiste-page__gallery a
+    {
+        padding: 0 1.25em;
+    }
+}
+@media screen and (max-width: 768px)
+{
+    .artiste-page__bloc
+    {
+                flex-direction: column;
+
+        -webkit-flex-direction: column;
+            -ms-flex-direction: column;
+    }
+    .artiste-page__infos
+    {
+        width: 100%;
+    }
+    .artiste-page__bio
+    {
+        width: 100%;
+        margin-left: 0;
+    }
+    .artiste-page__figure
+    {
+        -webkit-order: 2;
+        -ms-flex-order: 2;
+                order: 2;
+    }
+    .artiste-page__bloc-social
+    {
+        margin-top: 0;
+        margin-bottom: 1.25em;
+
+        -webkit-order: 1;
+        -ms-flex-order: 1;
+                order: 1;
+    }
+    .artiste-page__title
+    {
+        margin: 1em auto;
+    }
+    .artiste-page__gallery
+    {
+                flex-direction: column;
+
+        text-align: center;
+
+        -webkit-flex-direction: column;
+            -ms-flex-direction: column;
+    }
+    .artiste-page__gallery-img
+    {
+        max-width: 75%;
+        height: auto;
+        margin-bottom: 1.25em;
+    }
+}
+@media screen and (max-width: 450px)
+{
+    .artiste-page__title
+    {
+        font-size: 1.5625em;
+
+        max-width: 100%;
     }
 }
 .about__presentation
