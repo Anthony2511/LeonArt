@@ -51,13 +51,13 @@ function wp_register_types() {
               'menu_icon' => 'dashicons-calendar-alt',
               'supports' => ['title','thumbnail']
         ] );
-  register_post_type( 'news', [
-              'label' => 'News',
+  register_post_type( 'actualites', [
+              'label' => 'Actualités',
               'labels' => [
-                          'singular_name' => 'news',
-                          'add_new' =>'Ajouter une nouvelle news'
+                          'singular_name' => 'actualite',
+                          'add_new' =>'Ajouter une nouvelle actualité'
                     ],
-              'description' => 'Permet d\'afficher les différentes news',
+              'description' => 'Permet d\'afficher les différentes actualités',
               'public' => true,
               'menu_position' => 23,
               'menu_icon' => 'dashicons-welcome-write-blog',

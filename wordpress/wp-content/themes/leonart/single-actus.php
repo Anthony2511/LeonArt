@@ -8,8 +8,10 @@ Template Name: Page Single Actualités
 
 <body>
   <h1 class="hidden" aria-level="1" role="heading"><?php the_title(); ?></h1>
-  <?php get_header('home'); ?>
+  <?php get_header(); ?>
   <?php include('navigation.php'); ?>
-  <section>
-    <h2>Test</h2>
+  <section class="wrap">
+    <h2 class="title title-red" aria-level="2" role="heading"><?php the_title(); ?></h2>
+
+
   </section>
