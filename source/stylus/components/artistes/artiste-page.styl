@@ -1,0 +1,73 @@
+.artiste-page
+  margin: s(100) 0   
+  &__bloc
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    margin-bottom: s(50)
+  &__infos
+    display: flex
+    flex-direction: column
+    align-items: center
+    width: 30%
+  &__bio
+    width: 60%
+    font-size: s(16)
+    color: $darkGrey
+    line-height: 1.5
+    margin-left: s(50)
+  &__oeuvres
+    width: 60%
+  &__title
+    background-color: $mediumRed
+    color: $darkYellow
+    font-family: 'firasans'
+    font-weight 600
+    font-size: s(30)
+    padding: s(20,30) s(40,30)
+    max-width  50%
+    text-align: center
+    margin-bottom: s(50,30)
+  &__bloc-social
+    margin-top: s(20)
+  &__social
+    color: $mediumRed
+    font-size: s(40)
+    & span 
+      hidden()
+    &--facebook
+      &:before
+        icon('iconFacebook')
+    &--pinterest
+      &:before
+        icon('iconPinterest')
+        margin: 0 s(20,40)
+    &--twitter
+      &:before
+        icon('iconTwitter')
+  &__more
+    color: $darkGrey
+    font-size: s(20)
+    line-height: 2    
+    &--mail
+      &:before
+        icon('iconMail')
+        color: $mediumRed
+        margin-right: s(20,20)
+    &--tel
+      &:before
+        icon('iconTel')
+        color: $mediumRed
+        margin-right: s(20,20)
+  &__gallery-img
+    max-width s(200)
+    height: s(140)
+  &__gallery
+    display: flex
+    flex-direction: row
+    justify-content: space-around
+
+
+@media screen and (max-width 1300px)
+  .artiste-page
+    padding: 0 s(20)

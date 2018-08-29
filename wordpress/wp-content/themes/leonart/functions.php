@@ -5,6 +5,7 @@ add_theme_support('post-thumbnails');
 add_image_size( 'thumb-home-artistes', 272, 211, true );
 add_image_size( 'thumb-home-programmes', 421, 312, true );
 add_image_size( 'thumb-artists', 540, 9999, true );
+add_image_size( 'thumb-gallery', 250, 160, true );
 
 
 // Define shortcut path
