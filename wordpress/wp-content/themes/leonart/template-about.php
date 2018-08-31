@@ -94,7 +94,7 @@ Template Name: Page About
           <span class="about__numbers-name">expositions</span>
         </div>
       </div>
-      <a href="<?php the_permalink(49); ?>" class="button button-contact" title="Vers la page de tous les artistes"><span class="span"><?= __('Voir l\'agenda complet', 'wp'); ?></span></a>
+      <a href="<?php the_permalink(49); ?>" class="button" title="Vers la page de tous les artistes"><span class="span"><?= __('Voir l\'agenda complet', 'wp'); ?></span></a>
     </section>
   </section>
   <?php include('footer.php'); ?>

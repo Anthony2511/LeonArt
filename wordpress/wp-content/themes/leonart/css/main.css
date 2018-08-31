@@ -2008,6 +2008,93 @@ body
 {
     padding-top: 3.125em;
 }
+@media screen and (max-width: 1300px)
+{
+    .pratique-page
+    {
+        padding: 0 1.25em;
+    }
+}
+@media screen and (max-width: 1024px)
+{
+    .pratique__location-container
+    {
+        -webkit-column-count: 2;
+                column-count: 2;
+    }
+    .pratique__infos
+    {
+                flex-direction: column;
+
+        -webkit-flex-direction: column;
+            -ms-flex-direction: column;
+    }
+    .pratique__event
+    {
+        margin-bottom: 3.125em;
+    }
+    .pratique__parking
+    {
+        width: 100%;
+    }
+}
+@media screen and (max-width: 768px)
+{
+    .pratique__location-container
+    {
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display:         flex;
+                flex-direction: column;
+
+        -webkit-flex-direction: column;
+            -ms-flex-direction: column;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+                align-items: center;
+    }
+    .pratique__number
+    {
+        font-size: 1.25em;
+    }
+    .pratique__location
+    {
+        font-size: 1em;
+    }
+    .pratique__event
+    {
+        width: 60%;
+    }
+    .pratique__event-title
+    {
+        font-size: 1.5625em;
+    }
+    .pratique__location-title
+    {
+        font-size: 2.5em;
+    }
+}
+@media screen and (max-width: 450px)
+{
+    .pratique__location-title
+    {
+        font-size: 1.875em;
+    }
+}
+@media screen and (max-width: 375px)
+{
+    .pratique__event
+    {
+        width: 75%;
+    }
+    .pratique__start
+    {
+        font-size: 1em;
+    }
+}
 .menu-page
 {
     position: relative;
@@ -2557,8 +2644,6 @@ body
 }
 .footer__bloc
 {
-    padding: 3.125em 0;
-
     background-color: #851c47;
 }
 .footer__infos
@@ -2916,6 +3001,12 @@ body
 
         max-width: 40%;
     }
+    .button-pratique
+    {
+        font-size: .875em;
+
+        max-width: 100%;
+    }
 }
 @media screen and (max-width: 850px)
 {
@@ -2934,12 +3025,20 @@ body
     {
         margin: 0 auto;
     }
+    .button-pratique
+    {
+        max-width: 100%;
+    }
 }
 @media screen and (max-width: 600px)
 {
     .button
     {
         max-width: 60%;
+    }
+    .button-pratique
+    {
+        max-width: 100%;
     }
 }
 @media screen and (max-width: 500px)
@@ -2948,10 +3047,18 @@ body
     {
         max-width: 70%;
     }
+    .button-pratique
+    {
+        max-width: 100%;
+    }
 }
 @media screen and (max-width: 375px)
 {
     .button
+    {
+        max-width: 100%;
+    }
+    .button-pratique
     {
         max-width: 100%;
     }

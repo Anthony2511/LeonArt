@@ -64,3 +64,47 @@
         margin-bottom: s(20,30) 
 .pratique-page
     padding-top: s(50)
+
+@media screen and (max-width 1300px)
+    .pratique-page
+        padding: 0 s(20)
+
+@media screen and (max-width 1024px)
+    .pratique
+        &__location-container
+            column-count: 2
+        &__infos
+            flex-direction: column
+        &__event
+            margin-bottom: s(50)
+        &__parking
+            width 100%
+
+@media screen and (max-width 768px)
+    .pratique
+        &__location-container
+            display flex
+            flex-direction: column
+            justify-content: center
+            align-items: center
+        &__number
+            font-size s(20)
+        &__location
+            font-size: s(16)
+        &__event
+            width: 60%
+        &__event-title
+            font-size: s(25)
+        &__location-title
+            font-size: s(40)
+
+@media screen and (max-width 450px)
+    .pratique
+        &__location-title
+            font-size: s(30)
+@media screen and (max-width 375px)
+    .pratique
+        &__event
+            width: 75%
+        &__start
+            font-size: s(16)
