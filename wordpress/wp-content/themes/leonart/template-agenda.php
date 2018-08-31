@@ -34,9 +34,10 @@ Template Name: Page Agenda
            <?php $location = get_sub_field('event__location');?>
             <div class="agenda__location">
               <h3 class="agenda__location-title"><?= the_sub_field('event__title'); ?></h3>
-              <?php if(get_sub_field('event__location') !==null): ?>
+              <?php if(get_sub_field('event__location') !== ''): ?>
                 <a href="<?= $location->guid;?>" class="agenda__location-sign" title="Vers la page du lieu : <?= $location->post_title;?>"><?= $location->post_title;?></a>
-               <?php else: ?>
+               <?php elseif(get_sub_field('event__location') == null): ?>
+                <a href="<?= $location->guid;?>" class="agenda__location-sign location-hidden" title="Vers la page du lieu : <?= $location->post_title;?>"><?= $location->post_title;?></a>
             <?php endif; ?>
             </div>
       </div>

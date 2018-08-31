@@ -1125,6 +1125,10 @@ body
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
+.location-hidden__location-sign:before
+{
+    display: none;
+}
 @media screen and (max-width: 1300px)
 {
     .agenda__page
@@ -1879,6 +1883,78 @@ body
     width: 100%;
     height: 100%;
 }
+.pratique__location-container
+{
+    -webkit-column-count: 3;
+            column-count: 3;
+}
+.pratique__location-bloc
+{
+    line-height: 2;
+
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display:         flex;
+}
+.pratique__start
+{
+    font-family: 'firasans';
+    font-size: 1.25em;
+    font-weight: 600;
+    line-height: 1.5;
+
+    margin: 0 auto;
+    padding: 1.5em;
+
+    text-align: center;
+
+    color: #434343;
+    background-color: #fff;
+}
+.pratique__number
+{
+    font-family: 'firasans';
+    font-size: 1.5625em;
+    font-weight: 600;
+
+    min-width: 30px;
+    margin-right: .4em;
+
+    text-align: right;
+
+    color: #ffc652;
+}
+.pratique__location
+{
+    font-size: 1.25em;
+    font-weight: 300;
+
+    color: #fff;
+}
+.pratique__location-title
+{
+    font-size: 3.125em;
+    font-weight: 600;
+
+    margin: 1em 0;
+
+    text-align: center;
+
+    color: #fff;
+}
+.pratique__background
+{
+    background-color: #851c47;
+}
+.pratique__background-bloc
+{
+    position: relative;
+    top: -100px;
+}
+.pratique__bloc-intro
+{
+    padding-bottom: 6.25em;
+}
 .menu-page
 {
     position: relative;
@@ -2108,6 +2184,10 @@ body
         min-height: 0;
         margin-right: 0;
     }
+    .nav__item + .nav__item
+    {
+        margin-left: 0;
+    }
     .nav__logo
     {
         max-width: 2.5em;
@@ -2116,6 +2196,7 @@ body
     .nav__item
     {
         font-size: 1em;
+        line-height: 2;
 
         display: block;
 
@@ -2143,8 +2224,6 @@ body
         padding: 0;
 
         transition: .5s height ease;
-
-        background-color: $lightBlue;
     }
     .nav__bloc-link
     {
@@ -2188,6 +2267,10 @@ body
         -webkit-transform: rotate(0deg);
             -ms-transform: rotate(0deg);
                 transform: rotate(0deg);
+    }
+    .with-menu .nav__bloc
+    {
+        background-color: #851c47;
     }
 }
 @media screen and (max-width: 350px)

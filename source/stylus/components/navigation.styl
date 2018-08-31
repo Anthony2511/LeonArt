@@ -132,6 +132,8 @@
   .nav
     min-height: 0
     margin-right: 0
+    &__item + &__item
+      margin-left: 0
     &__logo
       max-width: s(40,16)
       height: s(48,16)
@@ -141,6 +143,7 @@
       margin-right: 0
       font-size: s(20,20)
       padding: s(20,20) 0
+      line-height: 2
     &__button
       display inline-block
       position: absolute
@@ -148,7 +151,6 @@
       text-align: right
       cursor pointer
     &__bloc
-      background-color $lightBlue
       margin-top s(75,22)
       height 0
       padding 0
@@ -173,6 +175,10 @@
       transition .5s transform ease
       transform rotate(0deg)
       top s(12,22)
+  .with-menu
+    .nav
+      &__bloc
+        background-color: $mediumRed
 
 @media screen and (max-width: 350px)
   .nav

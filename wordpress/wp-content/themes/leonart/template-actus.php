@@ -15,7 +15,7 @@ Template Name: Page Actualités
 
       <!-- Bloc all news -->
       <div class="news-page__bloc">
-        <?php $posts = new WP_Query( ['posts_per_page' => -1, 'post_type' => 'news', 'orderby' => 'ASC'] ); ?>
+        <?php $posts = new WP_Query( ['posts_per_page' => 3, 'post_type' => 'news', 'orderby' => 'ASC'] ); ?>
         <?php if($posts->have_posts()) : while($posts->have_posts()): $posts->the_post();?>
 
         <!-- Bloc single news -->
