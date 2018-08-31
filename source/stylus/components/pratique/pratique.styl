@@ -26,6 +26,8 @@
         color: $white
         font-weight 300
         font-size s(20)
+        &:hover
+            text-decoration: underline
     &__location-title
         font-size: s(50)
         font-weight 600
@@ -33,9 +35,32 @@
         text-align: center
         margin: s(50,50) 0
     &__background
-        background-color: $mediumRed
+        background-color: #6D183B
     &__background-bloc
         position relative
         top -100px
     &__bloc-intro
         padding-bottom: s(100)
+    &__parking
+        color: $darkGrey
+        line-height: 1.5
+        font-weight 400
+        width: 75%
+        & p
+            margin-bottom: 20px
+    &__parking-container
+        padding-bottom: s(30)
+    &__infos
+        display: flex
+        flex-direction: row
+        align-items: center
+    &__event
+        text-align: center
+        width: 50%
+    &__event-title
+        font-size: s(30)
+        font-weight 600 
+        color: $darkGrey
+        margin-bottom: s(20,30) 
+.pratique-page
+    padding-top: s(50)

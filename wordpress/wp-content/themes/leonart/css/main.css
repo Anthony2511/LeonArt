@@ -1931,6 +1931,10 @@ body
 
     color: #fff;
 }
+.pratique__location:hover
+{
+    text-decoration: underline;
+}
 .pratique__location-title
 {
     font-size: 3.125em;
@@ -1944,7 +1948,7 @@ body
 }
 .pratique__background
 {
-    background-color: #851c47;
+    background-color: #6d183b;
 }
 .pratique__background-bloc
 {
@@ -1954,6 +1958,55 @@ body
 .pratique__bloc-intro
 {
     padding-bottom: 6.25em;
+}
+.pratique__parking
+{
+    font-weight: 400;
+    line-height: 1.5;
+
+    width: 75%;
+
+    color: #434343;
+}
+.pratique__parking p
+{
+    margin-bottom: 20px;
+}
+.pratique__parking-container
+{
+    padding-bottom: 1.875em;
+}
+.pratique__infos
+{
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display:         flex;
+            flex-direction: row;
+
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+            align-items: center;
+}
+.pratique__event
+{
+    width: 50%;
+
+    text-align: center;
+}
+.pratique__event-title
+{
+    font-size: 1.875em;
+    font-weight: 600;
+
+    margin-bottom: .666666666666667em;
+
+    color: #434343;
+}
+.pratique-page
+{
+    padding-top: 3.125em;
 }
 .menu-page
 {
@@ -2801,6 +2854,21 @@ body
     left: 0;
 
     max-width: 60%;
+}
+.button-pratique
+{
+    font-size: .875em;
+    font-weight: 600;
+
+    max-width: 100%;
+    margin: 0;
+    padding: 1.071428571428571em 3.571428571428572em;
+
+    cursor: pointer;
+    text-transform: uppercase;
+
+    border: none;
+    border-radius: .714285714285714em;
 }
 .button-register
 {

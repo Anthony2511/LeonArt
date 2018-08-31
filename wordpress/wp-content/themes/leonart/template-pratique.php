@@ -10,7 +10,7 @@ Template Name: Page Pratique
   <h1 class="hidden" aria-level="1" role="heading"><?php the_title(); ?></h1>
   <?php get_header(); ?>
   <?php include('navigation.php'); ?>
-  <section>
+  <section class="pratique-page">
     <div class="wrap pratique__bloc-intro">
       <h2 class="title title-red" aria-level="2" role="heading"><?= __('En pratique','wp'); ?></h2>
       <p class="pratique__start">L’évènement 2018 Saint Léon’Art aura lieu du vendredi 28 au dimanche 30 septembre dans le quartier Saint Léonard.</p>
@@ -36,9 +36,19 @@ Template Name: Page Pratique
     </section>
         </div>
     </div>
-    <div class="wrap">
-      <h2>Test</h2>
+    <div class="pratique__infos wrap">
+     <section class="wrap pratique__parking-container">
+      <h3 class="title title-red left" aria-level="3" role="heading"><?= __('Informations parking','wp'); ?></h3>
+      <div class="pratique__parking">
+        <?= the_field('pratique__parking'); ?>
+      </div>
+    </section>
+    <section class="pratique__event">
+      <h3 class="pratique__event-title">Prévoir un évènement ?</h3>
+      <a href="<?php the_permalink(49); ?>" class="button button-pratique" title="Vers la page Agenda"><span class="span"><?= __('Vers la page agenda', 'wp'); ?></span></a>
+    </section>
     </div>
+   
   
   </section>
 

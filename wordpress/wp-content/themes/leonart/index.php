@@ -69,10 +69,10 @@ Template Name: Page d’accueil
           
           <!-- Infos de l'event -->
            <?php $location = $homeProgrammes[1]['event__location'];?>
-            <div class="agenda__location">
+            <section class="agenda__location">
               <h3 class="home__programmes-title"><?= $homeProgrammes[1]['event__title']; ?></h3>
               <a href="<?= $location->guid;?>" class="agenda__location-sign" title="Vers la page du lieu : <?= $location->post_title;?>"><?= $location->post_title;?></a>
-            </div>
+            </section>
       </div>
     </section>
     <?php wp_reset_postdata(); ?> 
@@ -93,7 +93,7 @@ Template Name: Page d’accueil
 
         <!-- Bloc single news -->
         
-        <div class="news-page__single-bloc">
+        <section class="news-page__single-bloc">
             <h3 class="news-page__title"><?php the_title(); ?></h3>
             <time datetime="<?= get_the_date('d/m/Y'); ?>" class="news-page__date"><?= get_the_date(); ?></time>
             <span><?php get_the_date(); ?></span>
@@ -106,7 +106,7 @@ Template Name: Page d’accueil
             </div>
              <a href="<?php the_permalink(); ?>" class="button button-article" title="Vers la page de l'article : <?php the_title(); ?>"><span class="span"><?= __('En savoir plus', 'wp'); ?></span></a>
             <a href="<?php the_permalink(); ?>" class="news-page__single-link"></a>
-        </div>
+        </section>
         </a>
         <?php wp_reset_postdata(); ?> 
         <?php endwhile; endif; ?>
