@@ -465,7 +465,7 @@ body
 }
 .home__artistes
 {
-    padding: 3.125em 1.25em;
+    padding: 3.125em 1.25em 6.25em;
 }
 .home__artistes-bloc
 {
@@ -1046,6 +1046,13 @@ body
 {
     padding-top: 3.125em;
 }
+@media screen and (max-width: 1300px)
+{
+    .contact__partenaires-bloc
+    {
+        padding: 0 1.25em 3.125em;
+    }
+}
 @media screen and (max-width: 768px)
 {
     .contact__bloc-title
@@ -1058,6 +1065,17 @@ body
     .contact__infos
     {
         font-size: 1em;
+    }
+    .contact__partenaires-bloc
+    {
+                flex-direction: column;
+
+        -webkit-flex-direction: column;
+            -ms-flex-direction: column;
+    }
+    .contact__partenaires-link
+    {
+        padding-bottom: 1.25em;
     }
 }
 .agenda__page
@@ -1380,6 +1398,7 @@ body
 {
     max-width: 12.5em;
     height: 8.75em;
+    margin-bottom: 1.25em;
 }
 .artiste-page__gallery
 {
@@ -1393,6 +1412,13 @@ body
     -webkit-justify-content: space-around;
     -ms-flex-pack: distribute;
             justify-content: space-around;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+}
+.artistes__page
+{
+    padding-top: 3.125em;
 }
 @media screen and (max-width: 1300px)
 {
@@ -2911,6 +2937,16 @@ body
     .footer__bloc-infos
     {
         margin: 3.125em auto;
+    }
+}
+@media screen and (max-width: 550px)
+{
+    .footer__copyright
+    {
+        font-size: .875em;
+        line-height: 1.5;
+
+        padding: 2.142857142857143em 1.428571428571429em;
     }
 }
 .button

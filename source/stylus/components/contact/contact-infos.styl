@@ -69,6 +69,11 @@
 .contact-page
   padding-top: s(50)
 
+@media screen and (max-width:1300px)
+  .contact
+    &__partenaires-bloc
+      padding: 0 s(20) s(50)
+
 @media screen and ( max-width:768px)
   .contact
     &__bloc-title
@@ -78,3 +83,7 @@
   .contact
     &__infos
       font-size: s(16,16)
+    &__partenaires-bloc
+      flex-direction: column
+    &__partenaires-link
+      padding-bottom: s(20)
