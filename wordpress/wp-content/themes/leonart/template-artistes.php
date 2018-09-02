@@ -11,7 +11,7 @@ Template Name: Page Artistes
   <?php get_header(); ?>
   <?php include('navigation.php'); ?>
 
-  <section class="wrap">
+  <section class="wrap artistes__page">
     <h2 class="title title-red" aria-level="2" role="heading"><?= __('Les artistes','wp'); ?></h2>
 
     <?php $terms = get_terms('places', 
@@ -20,6 +20,8 @@ Template Name: Page Artistes
                             'hide_empty' => true,
                             ]);
                             ?>
+
+  
                             
     <form method="GET" id="filter-artists">
         <label for="post-filter-artists">Filtrer les artistes</label>
@@ -34,7 +36,7 @@ Template Name: Page Artistes
     <div class="home__artistes-bloc-page">
       <?php $posts = new WP_Query( ['posts_per_page' => -1, 'post_type' => 'artistes', 'orderby' => 'rand'] ); ?>
       <?php if($posts->have_posts()) : while($posts->have_posts()): $posts->the_post();?>
-      <div class="home__single-artiste artistes-margin">
+      <div class="home__single-artiste artistes-margin <?= wp_display_taxonomy_terms($post->ID, 'places', 'slug'); ?>">
       <?php $homeArtist = get_field('artiste__photo'); ?>
         <figure class="home__artiste-img">
           <?php if( !empty($homeArtist) ): ?>

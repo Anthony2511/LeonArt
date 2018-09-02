@@ -44,10 +44,25 @@
       <h2 class="footer__partenaires-title"><?= __('En collaboration avec','wp'); ?></h2>
 
       <div class="contact__partenaires-bloc">
-    
+      <?php $posts = new WP_Query( ['page_id' => 105] ); ?>
+      <?php if($posts->have_posts()) : while($posts->have_posts()): $posts->the_post();?>
+       <?php if( have_rows('logo') ): ?>
+      <?php while( have_rows('logo') ): the_row(); ?>
+          <a href="<?= the_sub_field('logo-link'); ?>" target="_blank" class="contact__partenaires-link" title="Vers la page du partenaire">
+            <figure>
+              <?php $logo = get_sub_field('logo-partners'); ?>
+                <img  src="<?= $logo['url']; ?>" alt="<?= $logo['alt']; ?>">
+            </figure>
+          </a>
+          <?php endwhile; endif; ?>
+       <?php wp_reset_postdata(); ?> 
+      <?php endwhile; endif; ?>
       </div>
 
     </div>
+  </div>
+  <div class="footer__copyright">
+    <span>© Saint Léon'Art - Tous droits réservés. Design by <a href="http://beaumecker.be">Anthony Beaumecker</a></span>
   </div>
 </footer>
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>

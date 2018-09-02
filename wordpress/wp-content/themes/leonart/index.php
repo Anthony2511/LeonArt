@@ -92,7 +92,6 @@ Template Name: Page d’accueil
         <?php if($posts->have_posts()) : while($posts->have_posts()): $posts->the_post();?>
 
         <!-- Bloc single news -->
-        
         <section class="news-page__single-bloc">
             <h3 class="news-page__title"><?php the_title(); ?></h3>
             <time datetime="<?= get_the_date('d/m/Y'); ?>" class="news-page__date"><?= get_the_date(); ?></time>
@@ -111,6 +110,7 @@ Template Name: Page d’accueil
         <?php wp_reset_postdata(); ?> 
         <?php endwhile; endif; ?>
       </div>
+       <a href="<?php the_permalink(49); ?>" class="button" title="Vers la page Actualités"><span class="span"><?= __('Voir tous les actualités', 'wp'); ?></span></a>
   </section>
 
 	<?php include('footer.php'); ?>

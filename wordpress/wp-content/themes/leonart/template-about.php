@@ -10,7 +10,7 @@ Template Name: Page About
   <h1 class="hidden" aria-level="1" role="heading"><?php the_title(); ?></h1>
   <?php get_header(); ?>
   <?php include('navigation.php'); ?>
-  <section>
+  <section class="about__page">
     <h2 class="title title-red" aria-level="2" role="heading"><?= __('&Aacute; Propos de nous','wp'); ?></h2>
 
     <!-- BLOC PRESENTATION -->

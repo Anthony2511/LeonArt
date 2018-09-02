@@ -144,3 +144,15 @@ function wp_get_taxonomies($postID, $taxonomyName){
     }
     return $taxonomies;
 }
+
+
+function wp_display_taxonomy_terms($id, $taxonomy, $display) {
+    $result = '';
+    $terms = wp_get_post_terms($id, $taxonomy, [
+        'hide_empty' => true,
+    ]);
+    foreach($terms as $term) {
+        $result .= $term->$display . ' ';
+    }
+    return $result;
+}
