@@ -4,7 +4,7 @@
         display: flex
         flex-direction: row
         justify-content: space-between
-        margin-bottom: s(50)
+        margin-bottom: s(30)
     &__single-bloc
         width: 47.5%
         background-color: $white
@@ -41,3 +41,16 @@
         display block
         width: 100%
         height 100%
+
+@media screen and (max-width 1300px)
+    .news-page
+        &__bloc
+            padding: 0 s(20)
+
+@media screen and (max-width 1024px)
+    .news-page
+        &__bloc
+            flex-direction: column
+        &__single-bloc
+            width: 100%
+            margin-bottom: s(30)
