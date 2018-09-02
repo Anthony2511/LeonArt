@@ -72,11 +72,20 @@ Template Name: Page Single Artistes
             <?php endwhile; endif; ?>
             <?php endwhile; endif; ?>
           </div>
-               
-            
-           
-          </div>
+        </div>
 
+      </div>
+
+      <div>
+        <h3>Retrouvez également l'artiste ici</h3>
+        <?php $posts = new WP_Query( ['posts_per_page' => -1, 'post_type' => 'artistes'] ); ?>
+    <?php if($posts->have_posts()) : while($posts->have_posts()): $posts->the_post();?>
+        <?php $location = get_field('artiste__location');?>
+
+
+        <a href="<?= $location->guid;?>" title="Vers la page du lieu : <?= $location->post_title;?>"><?= $location->post_title;?></a>
+         <?php wp_reset_postdata(); ?> 
+    <?php endwhile; endif; ?>
       </div>
       
     </div>

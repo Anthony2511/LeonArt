@@ -46,5 +46,10 @@ Template Name: Page Agenda
     <?php wp_reset_postdata(); ?> 
     <?php endwhile; endif; ?>
   </section>
+  <section class="agenda__news">
+    <h3 class="agenda__news-title">Vous souhaitez être au courant des dernières actualités ?</h3>
+      <a href="<?php the_permalink(41); ?>" class="button button-bloc" title="Vers la page Actualités"><span class="span"><?= __('Voir tous les actualités', 'wp'); ?></span></a>
+
+  </section>
 
   	<?php include('footer.php'); ?>

@@ -1,6 +1,6 @@
 .agenda
   &__page
-    padding-top: s(50)
+    padding: s(50) 0
   &__title-date
     background-color: $mediumRed
     font-family: 'firasans'
@@ -47,6 +47,17 @@
       icon('iconLocationSign')
       position absolute
       left 0
+  &__news
+    background-color: $darkRed
+    padding s(50) s(20)
+    text-align: center
+    margin-bottom s(100)
+  &__news-title
+    color $white
+    font-family: 'firasans'
+    font-size: s(20)
+    font-weight: 600
+    margin-bottom: s(20,20)
 
 .location-hidden
     &__location-sign
@@ -55,7 +66,20 @@
 @media screen and (max-width 1300px)
   .agenda
     &__page
-      padding: 0 s(20,16)
+      padding: s(50) s(20,16)
+
+@media screen and (max-width 650px)
+  .agenda
+    &__location-title
+      font-size: s(18,16)
+    &__bloc-infos
+      padding: s(30,16)
+    &__time
+      font-size s(16,16)
+    &__location
+      width: 75%
+    &__news-title
+      font-size: s(18,16)
 
 @media screen and (max-width 375px)
   .agenda

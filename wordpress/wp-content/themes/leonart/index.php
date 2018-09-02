@@ -110,7 +110,7 @@ Template Name: Page d’accueil
         <?php wp_reset_postdata(); ?> 
         <?php endwhile; endif; ?>
       </div>
-       <a href="<?php the_permalink(49); ?>" class="button button-article" title="Vers la page Actualités"><span class="span"><?= __('Voir tous les actualités', 'wp'); ?></span></a>
+       <a href="<?php the_permalink(41); ?>" class="button button-news" title="Vers la page Actualités"><span class="span"><?= __('Voir tous les actualités', 'wp'); ?></span></a>
   </section>
 
 	<?php include('footer.php'); ?>
